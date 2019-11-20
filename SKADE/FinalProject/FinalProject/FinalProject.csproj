@@ -74,6 +74,36 @@
     <Compile Include="AdminMain.designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerCreate.Designer.cs">
+      <DependentUpon>CustomerCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerEdit.Designer.cs">
+      <DependentUpon>CustomerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSalesRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSalesRecord.Designer.cs">
+      <DependentUpon>CustomerSalesRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSearch.Designer.cs">
+      <DependentUpon>CustomerSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="DepartmentManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,17 +116,65 @@
     <Compile Include="EmployeDetailForm.Designer.cs">
       <DependentUpon>EmployeDetailForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeCreate.Designer.cs">
+      <DependentUpon>EmployeeCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeeEdit.Designer.cs">
       <DependentUpon>EmployeeEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeLoginEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeLoginEdit.Designer.cs">
+      <DependentUpon>EmployeeLoginEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentCreate.Designer.cs">
+      <DependentUpon>EquipmentCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forgotPassword.Designer.cs">
       <DependentUpon>forgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryCount.Designer.cs">
+      <DependentUpon>InventoryCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryMain.Designer.cs">
+      <DependentUpon>InventoryMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryOrder.Designer.cs">
+      <DependentUpon>InventoryOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryRequestDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryRequestDetails.Designer.cs">
+      <DependentUpon>InventoryRequestDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryRequests.Designer.cs">
+      <DependentUpon>InventoryRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -112,6 +190,66 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepairMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepairMain.Designer.cs">
+      <DependentUpon>RepairMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepairRecordDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepairRecordDetails.Designer.cs">
+      <DependentUpon>RepairRecordDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchRepairRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchRepairRecord.Designer.cs">
+      <DependentUpon>SearchRepairRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepairRequestDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepairRequestDetails.Designer.cs">
+      <DependentUpon>RepairRequestDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepairRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepairRequests.Designer.cs">
+      <DependentUpon>RepairRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleDetails.Designer.cs">
+      <DependentUpon>SaleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchInventory.Designer.cs">
+      <DependentUpon>SearchInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSalesRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchSalesRecord.Designer.cs">
+      <DependentUpon>SearchSalesRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarrantyReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarrantyReports.Designer.cs">
+      <DependentUpon>WarrantyReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeeklyReport.Designer.cs">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>

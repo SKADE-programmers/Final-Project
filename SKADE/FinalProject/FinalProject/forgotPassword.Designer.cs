@@ -32,7 +32,6 @@
             this.username = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Return = new System.Windows.Forms.Button();
             this.status = new System.Windows.Forms.StatusStrip();
             this.Ready = new System.Windows.Forms.ToolStripStatusLabel();
@@ -44,7 +43,7 @@
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Location = new System.Drawing.Point(62, 41);
+            this.Password.Location = new System.Drawing.Point(37, 41);
             this.Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(91, 13);
@@ -53,7 +52,7 @@
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(188, 38);
+            this.username.Location = new System.Drawing.Point(143, 38);
             this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(158, 20);
@@ -61,7 +60,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 92);
+            this.button1.Location = new System.Drawing.Point(336, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -76,31 +75,23 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 4;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
-            // 
             // Return
             // 
-            this.Return.Location = new System.Drawing.Point(246, 92);
+            this.Return.Location = new System.Drawing.Point(336, 103);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(75, 23);
             this.Return.TabIndex = 6;
             this.Return.Text = "Return";
             this.Return.UseVisualStyleBackColor = true;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // status
             // 
             this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Ready});
-            this.status.Location = new System.Drawing.Point(0, 344);
+            this.status.Location = new System.Drawing.Point(0, 145);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(600, 22);
+            this.status.Size = new System.Drawing.Size(434, 22);
             this.status.TabIndex = 7;
             this.status.Text = "status";
             // 
@@ -119,16 +110,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(434, 167);
             this.Controls.Add(this.status);
             this.Controls.Add(this.Return);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.username);
             this.Controls.Add(this.Password);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "forgotPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.forgotPassword_Load);
             this.status.ResumeLayout(false);
             this.status.PerformLayout();
@@ -144,7 +137,6 @@
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Return;
         private System.Windows.Forms.StatusStrip status;
         private System.Windows.Forms.ToolStripStatusLabel Ready;

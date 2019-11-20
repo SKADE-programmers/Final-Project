@@ -27,13 +27,22 @@ namespace FinalProject
 
         private void submit_Click(object sender, EventArgs e)
         {
-           // Login login = new Login();
-            AuthenticateTableAdapter authenticate = new AuthenticateTableAdapter();
-            //login.logUser = username.Text;
-            //login.logPass = pass.Text;
+            Logins login = new Logins();
+            AuthenticateTableAdapter authTable = new AuthenticateTableAdapter();
+            login.userName = username.Text;
+            
             try
             {
-
+                DataTable dataTable = new DataTable();
+                authTable.ForgotPassword(authDS.Authenticate, login.userName);
+                if(authDS.Tables[0].Rows.Count == 1)
+                {
+                     
+                    
+                   
+                        
+                    
+                }
             }
             catch
             {

@@ -13,90 +13,132 @@ using ClassLibrary;
 
 namespace FinalProject
 {
-
     public partial class LoginPage : Form
     {
-        
-
         public LoginPage()
         {
             InitializeComponent();
         }
-        public int attempts = 1;
 
-        private void Button1_Click(object sender, EventArgs e)
+       
+
+       
+
+        private void LinkLabel1_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel1.LinkColor = Color.FromArgb(0, 0, 255);
+        }
+
+        private void LinkLabel1_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel1.LinkColor = Color.Gray;
+        }
+
+        private void BtnLogin_MouseHover(object sender, EventArgs e)
+        {
+            btnlogin.BackColor = Color.LightGray;
+            btnlogin.ForeColor = Color.Black;
+        }
+
+        private void BtnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            btnlogin.BackColor = Color.White;
+            btnlogin.ForeColor = Color.Gray;
+           
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+            txtUserName.Text = "Username";
+            txtPassword.Text = "Password";
+            btnlogin.FlatAppearance.BorderSize = 0;
+            DateTime today = DateTime.Today;
+            lblDate.Text = today.ToString();
+           
+        }
+
+        
+
+       
+
+        private void TxtUserName_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUserName.ForeColor = Color.Black;
+            if (txtUserName.Text == "Username")
+            {
+                txtUserName.Text = "";
+            }
+        }
+
+        private void TxtPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPassword.ForeColor = Color.Black;
+            txtPassword.PasswordChar = Convert.ToChar("*");
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.Text = "";
+            }
+        }
+
+        private void Btnlogin_Click(object sender, EventArgs e)
         {
             Logins login = new Logins();
             AuthenticateTableAdapter taAuth = new AuthenticateTableAdapter();
-            login.userName = userText.Text;
-            login.passWord = userPass.Text;
+            login.userName = txtUserName.Text;
+            login.passWord = txtPassword.Text;
+            int attempts = 1;
             try
             {
-                DataTable dt = new DataTable();     
+                DataTable dt = new DataTable();
                 taAuth.Fill(authDS.Authenticate, login.userName, login.passWord);
                 if (authDS.Tables[0].Rows.Count == 1)
                 {
-                    Ready_Label.Text = "Login Success!";
+                    panel1.Text = "Login Success!";
                     MessageBox.Show("Welcome " + " " + login.userName + " :)");
                     Main main = new Main();
-                    //this.Hide();
+                    this.Hide();
+                    // ^ this hides the login box after they login but then we cant exit the program properly so we have to figure that out.
                     main.Show();
-                    
-                    
 
-                    
+
+
                 }
-                else {
-                    Ready_Label.Text = "login unsucessful\n" + attempts 
+                else
+                {
+                    panel1.Text = "login unsucessful " + attempts
                  + "out of 3";
                     attempts++;
                 }
 
-                if (login.userName == userText.Text && login.passWord == "")
+                if (login.userName == txtUserName.Text && login.passWord == "")
                 {
-                    Ready_Label.Text = "Please enter the password";
+                    panel1.Text = "Please enter the password";
                 }
-                
-                if  (login.userName == "" && login.passWord == "")
+
+                if (login.userName == "" && login.passWord == "")
                 {
-                    Ready_Label.Text = "Please enter the username and password";
+                    panel1.Text = "Please enter the username and password";
                 }
-                
-                
+
+
 
             }
             catch (Exception ex)
             {
-                Ready_Label.Text = "Something went wrong... please try again\n"  + ex.Message;
+                panel1.Text = "Something went wrong... please try again " + ex.Message;
             }
-            if(attempts == 4)
+            if (attempts == 4)
             {
-                
+
                 MessageBox.Show("You have reached maximum number of attempts... ");
             }
 
         }
-        
 
-        private void LoginPage_Load(object sender, EventArgs e)
-        {
-            
-
-
-
-        }
-
-       
-
-        private void forgotPassword_Click_1(object sender, EventArgs e)
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             forgotPassword forgot = new forgotPassword();
             forgot.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

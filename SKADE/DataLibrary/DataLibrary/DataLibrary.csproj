@@ -64,6 +64,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdminDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AuthDS.cs">
+      <DependentUpon>AuthDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AuthDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

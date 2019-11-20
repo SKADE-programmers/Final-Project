@@ -68,6 +68,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMain.designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentManagement.designer.cs">
+      <DependentUpon>DepartmentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeDetailForm.Designer.cs">
+      <DependentUpon>EmployeDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeEdit.Designer.cs">
+      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +112,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentManagement.resx">
+      <DependentUpon>DepartmentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeDetailForm.resx">
+      <DependentUpon>EmployeDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeEdit.resx">
+      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forgotPassword.resx">
       <DependentUpon>forgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +163,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Emmas.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

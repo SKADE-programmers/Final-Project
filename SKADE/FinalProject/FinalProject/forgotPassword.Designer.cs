@@ -29,107 +29,110 @@
         private void InitializeComponent()
         {
             this.Password = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
-            this.pass = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.newpass = new System.Windows.Forms.TextBox();
-            this.submit = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.reenterpass = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Return = new System.Windows.Forms.Button();
+            this.status = new System.Windows.Forms.StatusStrip();
+            this.Ready = new System.Windows.Forms.ToolStripStatusLabel();
+            this.authDS = new DataLibrary.AuthDS();
+            this.status.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.authDS)).BeginInit();
             this.SuspendLayout();
             // 
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Location = new System.Drawing.Point(82, 50);
+            this.Password.Location = new System.Drawing.Point(62, 41);
+            this.Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(121, 17);
+            this.Password.Size = new System.Drawing.Size(91, 13);
             this.Password.TabIndex = 0;
             this.Password.Text = "Enter UserName: ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Enter Password: ";
-            // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(251, 47);
+            this.username.Location = new System.Drawing.Point(188, 38);
+            this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(210, 22);
+            this.username.Size = new System.Drawing.Size(158, 20);
             this.username.TabIndex = 2;
             // 
-            // pass
+            // button1
             // 
-            this.pass.Location = new System.Drawing.Point(251, 85);
-            this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(210, 22);
-            this.pass.TabIndex = 3;
+            this.button1.Location = new System.Drawing.Point(125, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 126);
+            this.label1.Location = new System.Drawing.Point(62, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 17);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Enter New Password:";
             // 
-            // newpass
+            // label2
             // 
-            this.newpass.Location = new System.Drawing.Point(252, 123);
-            this.newpass.Name = "newpass";
-            this.newpass.Size = new System.Drawing.Size(210, 22);
-            this.newpass.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(69, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "label2";
             // 
-            // submit
+            // Return
             // 
-            this.submit.Location = new System.Drawing.Point(252, 203);
-            this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(88, 34);
-            this.submit.TabIndex = 6;
-            this.submit.Text = "Submit";
-            this.submit.UseVisualStyleBackColor = true;
-            this.submit.Click += new System.EventHandler(this.submit_Click);
+            this.Return.Location = new System.Drawing.Point(246, 92);
+            this.Return.Name = "Return";
+            this.Return.Size = new System.Drawing.Size(75, 23);
+            this.Return.TabIndex = 6;
+            this.Return.Text = "Return";
+            this.Return.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // status
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "R- enter Password: ";
+            this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Ready});
+            this.status.Location = new System.Drawing.Point(0, 344);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(600, 22);
+            this.status.TabIndex = 7;
+            this.status.Text = "status";
             // 
-            // reenterpass
+            // Ready
             // 
-            this.reenterpass.Location = new System.Drawing.Point(251, 163);
-            this.reenterpass.Name = "reenterpass";
-            this.reenterpass.Size = new System.Drawing.Size(211, 22);
-            this.reenterpass.TabIndex = 8;
+            this.Ready.Name = "Ready";
+            this.Ready.Size = new System.Drawing.Size(39, 17);
+            this.Ready.Text = "Ready";
+            // 
+            // authDS
+            // 
+            this.authDS.DataSetName = "AuthDS";
+            this.authDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // forgotPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reenterpass);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.submit);
-            this.Controls.Add(this.newpass);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pass);
-            this.Controls.Add(this.username);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.status);
+            this.Controls.Add(this.Return);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.username);
             this.Controls.Add(this.Password);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "forgotPassword";
-            this.Text = "forgotPassword";
             this.Load += new System.EventHandler(this.forgotPassword_Load);
+            this.status.ResumeLayout(false);
+            this.status.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.authDS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,13 +141,13 @@
         #endregion
 
         private System.Windows.Forms.Label Password;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.TextBox pass;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox newpass;
-        private System.Windows.Forms.Button submit;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox reenterpass;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.StatusStrip status;
+        private System.Windows.Forms.ToolStripStatusLabel Ready;
+        private DataLibrary.AuthDS authDS;
     }
 }

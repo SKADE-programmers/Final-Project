@@ -39,9 +39,9 @@ namespace FinalProject
                     Ready_Label.Text = "Login Success!";
                     MessageBox.Show("Welcome " + " " + login.userName + " :)");
                     Main main = new Main();
-                    //this.Hide();
-                    main.Show();
-                    
+                    this.Hide();
+                    // ^ this hides the login box after they login but then we cant exit the program properly so we have to figure that out.
+                    main.Show();            
                     
 
                     

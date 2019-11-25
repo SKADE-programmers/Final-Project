@@ -110,6 +110,11 @@
     <Compile Include="DepartmentManagement.designer.cs">
       <DependentUpon>DepartmentManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmmasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmmasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmployeDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +285,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WarrantyReports.resx">
+      <DependentUpon>WarrantyReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="EmmasDataSet.xsc">
+      <DependentUpon>EmmasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmmasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmmasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EmmasDataSet.xss">
+      <DependentUpon>EmmasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

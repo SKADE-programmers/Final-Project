@@ -15,7 +15,8 @@ namespace FinalProject
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);            
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmWarrantyReports());
             Application.Run(new LoginPage());
             
         }

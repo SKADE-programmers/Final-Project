@@ -41,8 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logins.cs" />
+    <Compile Include="Regular Columns of the DB\Product Orders.cs" />
+    <Compile Include="Regular Columns of the DB\Equip Types.cs" />
+    <Compile Include="Regular Columns of the DB\Equipments.cs" />
+    <Compile Include="Regular Columns of the DB\Inventorys.cs" />
+    <Compile Include="Regular Columns of the DB\Manufacturers.cs" />
+    <Compile Include="Regular Columns of the DB\On Orders.cs" />
+    <Compile Include="Regular Columns of the DB\Order Lines.cs" />
+    <Compile Include="Regular Columns of the DB\Payments.cs" />
+    <Compile Include="Regular Columns of the DB\Positions.cs" />
+    <Compile Include="Regular Columns of the DB\Customers.cs" />
+    <Compile Include="Regular Columns of the DB\Employees.cs" />
+    <Compile Include="For Final Project\Logins.cs" />
+    <Compile Include="Regular Columns of the DB\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regular Columns of the DB\Receipts.cs" />
+    <Compile Include="Regular Columns of the DB\Service Order.cs" />
+    <Compile Include="Regular Columns of the DB\Services.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

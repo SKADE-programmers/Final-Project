@@ -2,3 +2,8 @@ C:\Users\Scott\Desktop\Final-Project-master\SKADE\ClassLibrary\ClassLibrary\bin\
 C:\Users\Scott\Desktop\Final-Project-master\SKADE\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.pdb
 C:\Users\Scott\Desktop\Final-Project-master\SKADE\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\Scott\Desktop\Final-Project-master\SKADE\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Downloads\Final-Project-temp\SKADE\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Final-Project-temp\SKADE\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\Administrator\Downloads\Final-Project-temp\SKADE\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Downloads\Final-Project-temp\SKADE\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\Administrator\Downloads\Final-Project-temp\SKADE\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.pdb

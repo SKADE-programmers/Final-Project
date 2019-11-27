@@ -15,9 +15,13 @@ namespace FinalProject
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);            
+            Application.SetCompatibleTextRenderingDefault(false);
+            //for testing:
+            Application.Run(new EmployeDetailForm());
             Application.Run(new LoginPage());
-            
+
         }
-    }
+        
+
+   }
 }

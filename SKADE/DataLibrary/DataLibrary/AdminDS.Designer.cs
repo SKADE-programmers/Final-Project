@@ -54,6 +54,8 @@ namespace DataLibrary {
         
         private serviceDataTable tableservice;
         
+        private global::System.Data.DataRelation relationemployee_fk_posID;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -530,6 +532,7 @@ namespace DataLibrary {
                     this.tableservice.InitVars();
                 }
             }
+            this.relationemployee_fk_posID = this.Relations["employee_fk_posID"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -570,6 +573,10 @@ namespace DataLibrary {
             base.Tables.Add(this.tableProduct);
             this.tableservice = new serviceDataTable();
             base.Tables.Add(this.tableservice);
+            this.relationemployee_fk_posID = new global::System.Data.DataRelation("employee_fk_posID", new global::System.Data.DataColumn[] {
+                        this.tablePosition.idColumn}, new global::System.Data.DataColumn[] {
+                        this._tableEmployeeCreate_Delete.posIDColumn}, false);
+            this.Relations.Add(this.relationemployee_fk_posID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1560,15 +1567,18 @@ namespace DataLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public _EmployeeCreate_DeleteRow Add_EmployeeCreate_DeleteRow(string empFirst, string empLast, int posID, string logUser, string logPass, int empID) {
+            public _EmployeeCreate_DeleteRow Add_EmployeeCreate_DeleteRow(string empFirst, string empLast, PositionRow parentPositionRowByemployee_fk_posID, string logUser, string logPass, int empID) {
                 _EmployeeCreate_DeleteRow row_EmployeeCreate_DeleteRow = ((_EmployeeCreate_DeleteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         empFirst,
                         empLast,
-                        posID,
+                        null,
                         logUser,
                         logPass,
                         empID};
+                if ((parentPositionRowByemployee_fk_posID != null)) {
+                    columnValuesArray[2] = parentPositionRowByemployee_fk_posID[0];
+                }
                 row_EmployeeCreate_DeleteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row_EmployeeCreate_DeleteRow);
                 return row_EmployeeCreate_DeleteRow;
@@ -6204,6 +6214,17 @@ namespace DataLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PositionRow PositionRow {
+                get {
+                    return ((PositionRow)(this.GetParentRow(this.Table.ParentRelations["employee_fk_posID"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["employee_fk_posID"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsempFirstNull() {
                 return this.IsNull(this._tableEmployeeCreate_Delete.empFirstColumn);
             }
@@ -7964,6 +7985,17 @@ namespace DataLibrary {
             public void SetposNameNull() {
                 this[this.tablePosition.posNameColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public _EmployeeCreate_DeleteRow[] _GetEmployeeCreate_DeleteRows() {
+                if ((this.Table.ChildRelations["employee_fk_posID"] == null)) {
+                    return new _EmployeeCreate_DeleteRow[0];
+                }
+                else {
+                    return ((_EmployeeCreate_DeleteRow[])(base.GetChildRows(this.Table.ChildRelations["employee_fk_posID"])));
+                }
+            }
         }
         
         /// <summary>
@@ -8892,13 +8924,20 @@ namespace DataLibrary.AdminDSTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        employee.id, employee.empFirst, employee.empLast, position.posName\r" +
                 "\nFROM            employee INNER JOIN\r\n                         position ON emplo" +
                 "yee.posID = position.id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        id, empFirst, empLast\r\nFROM            employee\r\nWHERE        (empF" +
+                "irst = @Param1) AND (empLast = @Param2)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "empFirst", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param2", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "empLast", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8920,6 +8959,54 @@ namespace DataLibrary.AdminDSTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual AdminDS.EmployeeSimpleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            AdminDS.EmployeeSimpleDataTable dataTable = new AdminDS.EmployeeSimpleDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(AdminDS.EmployeeSimpleDataTable dataTable, string Param1, string Param2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual AdminDS.EmployeeSimpleDataTable GetDataBy(string Param1, string Param2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
             AdminDS.EmployeeSimpleDataTable dataTable = new AdminDS.EmployeeSimpleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -9067,7 +9154,7 @@ namespace DataLibrary.AdminDSTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        employee.id, employee.empFirst, employee.empLast, employee.posID, position.posName, logins.logUser, logins.logPass
@@ -9075,6 +9162,15 @@ FROM            employee INNER JOIN
                          position ON employee.posID = position.id INNER JOIN
                          logins ON employee.id = logins.empID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        employee.id, employee.empFirst, employee.empLast, employee.posID, position.posName, logins.logUser, logins.logPass
+FROM            employee INNER JOIN
+                         position ON employee.posID = position.id INNER JOIN
+                         logins ON employee.id = logins.empID
+WHERE        (employee.id = @Param1)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9096,6 +9192,32 @@ FROM            employee INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual AdminDS.EmployeeDetailsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            AdminDS.EmployeeDetailsDataTable dataTable = new AdminDS.EmployeeDetailsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByID(AdminDS.EmployeeDetailsDataTable dataTable, int Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual AdminDS.EmployeeDetailsDataTable GetDataByID(int Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
             AdminDS.EmployeeDetailsDataTable dataTable = new AdminDS.EmployeeDetailsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -13027,21 +13149,21 @@ SELECT id, serName, serDescription, serPrice FROM service WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(AdminDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._positionTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Position.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._positionTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13082,19 +13204,19 @@ SELECT id, serName, serDescription, serPrice FROM service WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(AdminDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._positionTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Position.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._positionTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -13156,19 +13278,19 @@ SELECT id, serName, serDescription, serPrice FROM service WHERE (id = @id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._positionTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Position.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._positionTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._manufacturerTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._manufacturerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._positionTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Position.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._positionTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

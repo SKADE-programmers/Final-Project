@@ -52,8 +52,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\ClassLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="DataLibrary">
-      <HintPath>..\..\DataLibrary\DataLibrary\bin\Debug\DataLibrary.dll</HintPath>
+    <Reference Include="DataLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DataLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,10 +69,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminMain.cs">
+    <Compile Include="Admin\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminMain.designer.cs">
+    <Compile Include="Admin\AdminMain.designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerCreate.cs">
@@ -110,29 +111,17 @@
     <Compile Include="DepartmentManagement.designer.cs">
       <DependentUpon>DepartmentManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeDetailForm.cs">
+    <Compile Include="Admin\EmployeDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeDetailForm.Designer.cs">
+    <Compile Include="Admin\EmployeDetailForm.Designer.cs">
       <DependentUpon>EmployeDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeCreate.cs">
+    <Compile Include="Admin\EmployeeCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeCreate.Designer.cs">
+    <Compile Include="Admin\EmployeeCreate.Designer.cs">
       <DependentUpon>EmployeeCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeEdit.Designer.cs">
-      <DependentUpon>EmployeeEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeLoginEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeLoginEdit.Designer.cs">
-      <DependentUpon>EmployeeLoginEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="EquipmentCreate.cs">
       <SubType>Form</SubType>
@@ -140,34 +129,40 @@
     <Compile Include="EquipmentCreate.Designer.cs">
       <DependentUpon>EquipmentCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="forgotPassword.cs">
+    <Compile Include="Sales\SalesMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forgotPassword.Designer.cs">
+    <Compile Include="Sales\SalesMain.Designer.cs">
+      <DependentUpon>SalesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\forgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shared\forgotPassword.Designer.cs">
       <DependentUpon>forgotPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryCount.cs">
+    <Compile Include="Inventory\InventoryCount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryCount.Designer.cs">
+    <Compile Include="Inventory\InventoryCount.Designer.cs">
       <DependentUpon>InventoryCount.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryMain.cs">
+    <Compile Include="Inventory\InventoryMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryMain.Designer.cs">
+    <Compile Include="Inventory\InventoryMain.Designer.cs">
       <DependentUpon>InventoryMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryOrder.cs">
+    <Compile Include="Inventory\InventoryOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryOrder.Designer.cs">
+    <Compile Include="Inventory\InventoryOrder.Designer.cs">
       <DependentUpon>InventoryOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryRequestDetails.cs">
+    <Compile Include="Inventory\InventoryRequestDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryRequestDetails.Designer.cs">
+    <Compile Include="Inventory\InventoryRequestDetails.Designer.cs">
       <DependentUpon>InventoryRequestDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryRequests.cs">
@@ -176,16 +171,16 @@
     <Compile Include="InventoryRequests.Designer.cs">
       <DependentUpon>InventoryRequests.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.cs">
+    <Compile Include="Shared\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
+    <Compile Include="Shared\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Shared\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Shared\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -226,10 +221,10 @@
     <Compile Include="SaleDetails.Designer.cs">
       <DependentUpon>SaleDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchInventory.cs">
+    <Compile Include="Shared\SearchInventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchInventory.Designer.cs">
+    <Compile Include="Shared\SearchInventory.Designer.cs">
       <DependentUpon>SearchInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="SearchSalesRecord.cs">
@@ -238,37 +233,37 @@
     <Compile Include="SearchSalesRecord.Designer.cs">
       <DependentUpon>SearchSalesRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="WarrantyReports.cs">
+    <Compile Include="Admin\WarrantyReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WarrantyReports.Designer.cs">
+    <Compile Include="Admin\WarrantyReports.Designer.cs">
       <DependentUpon>WarrantyReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="WeeklyReport.cs">
+    <Compile Include="Admin\WeeklyReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WeeklyReport.Designer.cs">
+    <Compile Include="Admin\WeeklyReport.Designer.cs">
       <DependentUpon>WeeklyReport.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminMain.resx">
+    <EmbeddedResource Include="Admin\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EmployeeCreate.resx">
+      <DependentUpon>EmployeeCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmentManagement.resx">
       <DependentUpon>DepartmentManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeDetailForm.resx">
+    <EmbeddedResource Include="Admin\EmployeDetailForm.resx">
       <DependentUpon>EmployeDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeEdit.resx">
-      <DependentUpon>EmployeeEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forgotPassword.resx">
+    <EmbeddedResource Include="Shared\forgotPassword.resx">
       <DependentUpon>forgotPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
+    <EmbeddedResource Include="Shared\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Shared\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -294,13 +289,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Emmas.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Emmas_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Emmas.mdf</DependentUpon>
-    </Content>
     <Content Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>
@@ -315,5 +303,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,7 @@ namespace FinalProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //for testing:
-            Application.Run(new EmployeDetailForm());
+            //Application.Run(new EmployeDetailForm());
             Application.Run(new LoginPage());
 
         }

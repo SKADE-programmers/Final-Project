@@ -35,7 +35,6 @@ namespace FinalProject
 
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             xClicked = false;
             this.Close();
         }

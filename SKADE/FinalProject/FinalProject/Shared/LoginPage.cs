@@ -20,9 +20,9 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        
+        int attempts = 1;
 
-       
+
 
         private void LinkLabel1_MouseHover(object sender, EventArgs e)
         {
@@ -86,7 +86,7 @@ namespace FinalProject
             AuthenticateTableAdapter taAuth = new AuthenticateTableAdapter();
             login.userName = txtUserName.Text;
             login.passWord = txtPassword.Text;            
-            int attempts = 1;             
+                         
 
             try
             {
@@ -95,17 +95,17 @@ namespace FinalProject
                 if (authDS.Tables[0].Rows.Count == 1)
                 {
                     login.ID = int.Parse(authDS.Tables[0].Rows[0].ItemArray[0].ToString());
-                    panel1.Text = "Login Success!";
-                   // MessageBox.Show("Welcome " + " " + login.userName + " :) " + login.ID.ToString());
+                    StatusLabel.Text = "Login Success!";
+                    // MessageBox.Show("Welcome " + " " + login.userName + " :) " + login.ID.ToString());
                     int pos = int.Parse(authDS.Tables[0].Rows[0].ItemArray[1].ToString());
-                    Main main = new Main();                    
-                    main.FormClosing += new FormClosingEventHandler(ChildFormClosing);                    
+                    Main main = new Main();
+                    main.FormClosing += new FormClosingEventHandler(ChildFormClosing);
 
                     if (pos == 1)
                     {
                         SalesMain salesMain = new SalesMain();
                         salesMain.MdiParent = main;
-                        salesMain.Show();                        
+                        salesMain.Show();
                     }
                     else if (pos == 2)
                     {
@@ -116,7 +116,7 @@ namespace FinalProject
                     else if (pos == 3)
                     {//Admin
                         AdminMain adminMain = new AdminMain();
-                        adminMain.MdiParent = main;                        
+                        adminMain.MdiParent = main;
                         adminMain.Show();
                     }
                     else if (pos == 4)
@@ -131,7 +131,7 @@ namespace FinalProject
                         inventoryMain.MdiParent = main;
                         inventoryMain.Show();
 
-                    }                    
+                    }
                     this.Hide();
                     // ^ this hides the login box after they login but then we cant exit the program properly so we have to figure that out.
                     main.Show();
@@ -139,21 +139,21 @@ namespace FinalProject
 
 
                 }
-                else
-                {
-                    panel1.Text = "login unsucessful " + attempts
-                 + "out of 3";
+                else{
+
+                    StatusLabel.Text = "login unsucessful " + attempts + "out of 3";
                     attempts++;
                 }
+                    
 
                 if (login.userName == txtUserName.Text && login.passWord == "")
                 {
-                    panel1.Text = "Please enter the password";
+                    StatusLabel.Text = "Please enter the password";
                 }
 
                 if (login.userName == "" && login.passWord == "")
                 {
-                    panel1.Text = "Please enter the username and password";
+                    StatusLabel.Text = "Please enter the username and password";
                 }
 
 
@@ -161,7 +161,7 @@ namespace FinalProject
             }
             catch (Exception ex)
             {
-                panel1.Text = "Something went wrong... please try again " + ex.Message;
+                StatusLabel.Text = "Something went wrong... please try again " + ex.Message;
             }
             if (attempts == 4)
             {
@@ -178,6 +178,9 @@ namespace FinalProject
         }
         private void ChildFormClosing(object sender, FormClosingEventArgs e)
         {
+            txtUserName.Text = "Username";
+            txtPassword.Text = "Password";
+            attempts = 1;
             this.Show();
         }
     }

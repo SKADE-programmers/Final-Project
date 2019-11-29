@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataLibrary.AuthDSTableAdapters;
+using DataLibrary;
+using ClassLibrary;
 
 namespace FinalProject
 {
@@ -17,24 +20,28 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private void AdminMain_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Now;
+            lblDate.Text = today.ToString();
+            btnCreateNewEmployee.FlatAppearance.BorderSize = 0;
+            btnDepartment.FlatAppearance.BorderSize = 0;
+            btnReports.FlatAppearance.BorderSize = 0;
+        }
+
+        private void AdminMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void btnDepartment_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        private void adminLandingDeptmanagement1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }

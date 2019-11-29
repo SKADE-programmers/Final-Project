@@ -50,7 +50,7 @@
   <ItemGroup>
     <Reference Include="ClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ClassLibrary.dll</HintPath>
+      <HintPath>..\..\..\..\..\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.dll</HintPath>
     </Reference>
     <Reference Include="DataLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -75,17 +75,29 @@
     <Compile Include="Admin\AdminMain.designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerCreate.cs">
+    <Compile Include="Admin\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerCreate.Designer.cs">
+    <Compile Include="Admin\Customer.designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomerCreate.designer.cs">
       <DependentUpon>CustomerCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDetails.cs">
+    <Compile Include="Admin\CustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDetails.Designer.cs">
+    <Compile Include="Admin\CustomerDetails.designer.cs">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WarrantyReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\WarrantyReports.designer.cs">
+      <DependentUpon>WarrantyReports.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerEdit.cs">
       <SubType>Form</SubType>
@@ -135,12 +147,6 @@
     <Compile Include="Sales\SalesMain.Designer.cs">
       <DependentUpon>SalesMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shared\forgotPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shared\forgotPassword.Designer.cs">
-      <DependentUpon>forgotPassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inventory\InventoryCount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,12 @@
     </Compile>
     <Compile Include="InventoryRequests.Designer.cs">
       <DependentUpon>InventoryRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\forgotPassword2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shared\forgotPassword2.designer.cs">
+      <DependentUpon>forgotPassword2.cs</DependentUpon>
     </Compile>
     <Compile Include="Shared\LoginPage.cs">
       <SubType>Form</SubType>
@@ -233,12 +245,6 @@
     <Compile Include="SearchSalesRecord.Designer.cs">
       <DependentUpon>SearchSalesRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\WarrantyReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\WarrantyReports.Designer.cs">
-      <DependentUpon>WarrantyReports.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\WeeklyReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,8 +254,20 @@
     <EmbeddedResource Include="Admin\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CustomerCreate.resx">
+      <DependentUpon>CustomerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\EmployeeCreate.resx">
       <DependentUpon>EmployeeCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\WarrantyReports.resx">
+      <DependentUpon>WarrantyReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmentManagement.resx">
       <DependentUpon>DepartmentManagement.cs</DependentUpon>
@@ -257,8 +275,8 @@
     <EmbeddedResource Include="Admin\EmployeDetailForm.resx">
       <DependentUpon>EmployeDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Shared\forgotPassword.resx">
-      <DependentUpon>forgotPassword.cs</DependentUpon>
+    <EmbeddedResource Include="Shared\forgotPassword2.resx">
+      <DependentUpon>forgotPassword2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shared\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

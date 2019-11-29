@@ -82,14 +82,6 @@ namespace FinalProject {
         
         private global::System.Data.DataRelation relationreceipt_fk_paymentID;
         
-        private global::System.Data.DataRelation relationserord_fk_empID;
-        
-        private global::System.Data.DataRelation relationserord_fk_equipID;
-        
-        private global::System.Data.DataRelation relationserord_fk_reseiptID;
-        
-        private global::System.Data.DataRelation relationserord_fk_serviceID;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -601,10 +593,6 @@ namespace FinalProject {
             this.relationreceipt_fk_custID = this.Relations["receipt_fk_custID"];
             this.relationreceipt_fk_empID = this.Relations["receipt_fk_empID"];
             this.relationreceipt_fk_paymentID = this.Relations["receipt_fk_paymentID"];
-            this.relationserord_fk_empID = this.Relations["serord_fk_empID"];
-            this.relationserord_fk_equipID = this.Relations["serord_fk_equipID"];
-            this.relationserord_fk_reseiptID = this.Relations["serord_fk_reseiptID"];
-            this.relationserord_fk_serviceID = this.Relations["serord_fk_serviceID"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -699,22 +687,6 @@ namespace FinalProject {
                         this.tablepayment.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablereceipt.paymentIDColumn}, false);
             this.Relations.Add(this.relationreceipt_fk_paymentID);
-            this.relationserord_fk_empID = new global::System.Data.DataRelation("serord_fk_empID", new global::System.Data.DataColumn[] {
-                        this.tableemployee.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableservice_order.empIDColumn}, false);
-            this.Relations.Add(this.relationserord_fk_empID);
-            this.relationserord_fk_equipID = new global::System.Data.DataRelation("serord_fk_equipID", new global::System.Data.DataColumn[] {
-                        this.tableequipment.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableservice_order.equipIDColumn}, false);
-            this.Relations.Add(this.relationserord_fk_equipID);
-            this.relationserord_fk_reseiptID = new global::System.Data.DataRelation("serord_fk_reseiptID", new global::System.Data.DataColumn[] {
-                        this.tablereceipt.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableservice_order.receiptIDColumn}, false);
-            this.Relations.Add(this.relationserord_fk_reseiptID);
-            this.relationserord_fk_serviceID = new global::System.Data.DataRelation("serord_fk_serviceID", new global::System.Data.DataColumn[] {
-                        this.tableservice.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableservice_order.serviceIDColumn}, false);
-            this.Relations.Add(this.relationserord_fk_serviceID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5700,14 +5672,6 @@ namespace FinalProject {
             
             private global::System.Data.DataColumn columnserordWarranty;
             
-            private global::System.Data.DataColumn columnreceiptID;
-            
-            private global::System.Data.DataColumn columnserviceID;
-            
-            private global::System.Data.DataColumn columnequipID;
-            
-            private global::System.Data.DataColumn columnempID;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public service_orderDataTable() {
@@ -5783,38 +5747,6 @@ namespace FinalProject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn receiptIDColumn {
-                get {
-                    return this.columnreceiptID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn serviceIDColumn {
-                get {
-                    return this.columnserviceID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn equipIDColumn {
-                get {
-                    return this.columnequipID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn empIDColumn {
-                get {
-                    return this.columnempID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5850,30 +5782,14 @@ namespace FinalProject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public service_orderRow Addservice_orderRow(System.DateTime serordDateIn, System.DateTime serordDateOut, string serordIssue, bool serordWarranty, receiptRow parentreceiptRowByserord_fk_reseiptID, serviceRow parentserviceRowByserord_fk_serviceID, equipmentRow parentequipmentRowByserord_fk_equipID, employeeRow parentemployeeRowByserord_fk_empID) {
+            public service_orderRow Addservice_orderRow(System.DateTime serordDateIn, System.DateTime serordDateOut, string serordIssue, bool serordWarranty) {
                 service_orderRow rowservice_orderRow = ((service_orderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         serordDateIn,
                         serordDateOut,
                         serordIssue,
-                        serordWarranty,
-                        null,
-                        null,
-                        null,
-                        null};
-                if ((parentreceiptRowByserord_fk_reseiptID != null)) {
-                    columnValuesArray[5] = parentreceiptRowByserord_fk_reseiptID[0];
-                }
-                if ((parentserviceRowByserord_fk_serviceID != null)) {
-                    columnValuesArray[6] = parentserviceRowByserord_fk_serviceID[0];
-                }
-                if ((parentequipmentRowByserord_fk_equipID != null)) {
-                    columnValuesArray[7] = parentequipmentRowByserord_fk_equipID[0];
-                }
-                if ((parentemployeeRowByserord_fk_empID != null)) {
-                    columnValuesArray[8] = parentemployeeRowByserord_fk_empID[0];
-                }
+                        serordWarranty};
                 rowservice_orderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowservice_orderRow);
                 return rowservice_orderRow;
@@ -5908,10 +5824,6 @@ namespace FinalProject {
                 this.columnserordDateOut = base.Columns["serordDateOut"];
                 this.columnserordIssue = base.Columns["serordIssue"];
                 this.columnserordWarranty = base.Columns["serordWarranty"];
-                this.columnreceiptID = base.Columns["receiptID"];
-                this.columnserviceID = base.Columns["serviceID"];
-                this.columnequipID = base.Columns["equipID"];
-                this.columnempID = base.Columns["empID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5927,14 +5839,6 @@ namespace FinalProject {
                 base.Columns.Add(this.columnserordIssue);
                 this.columnserordWarranty = new global::System.Data.DataColumn("serordWarranty", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnserordWarranty);
-                this.columnreceiptID = new global::System.Data.DataColumn("receiptID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreceiptID);
-                this.columnserviceID = new global::System.Data.DataColumn("serviceID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnserviceID);
-                this.columnequipID = new global::System.Data.DataColumn("equipID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnequipID);
-                this.columnempID = new global::System.Data.DataColumn("empID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnempID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -5944,10 +5848,6 @@ namespace FinalProject {
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
                 this.columnserordIssue.MaxLength = 100;
-                this.columnreceiptID.AllowDBNull = false;
-                this.columnserviceID.AllowDBNull = false;
-                this.columnequipID.AllowDBNull = false;
-                this.columnempID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6442,17 +6342,6 @@ namespace FinalProject {
                     return ((receiptRow[])(base.GetChildRows(this.Table.ChildRelations["receipt_fk_empID"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public service_orderRow[] Getservice_orderRows() {
-                if ((this.Table.ChildRelations["serord_fk_empID"] == null)) {
-                    return new service_orderRow[0];
-                }
-                else {
-                    return ((service_orderRow[])(base.GetChildRows(this.Table.ChildRelations["serord_fk_empID"])));
-                }
-            }
         }
         
         /// <summary>
@@ -6665,17 +6554,6 @@ namespace FinalProject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetequSerialNull() {
                 this[this.tableequipment.equSerialColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public service_orderRow[] Getservice_orderRows() {
-                if ((this.Table.ChildRelations["serord_fk_equipID"] == null)) {
-                    return new service_orderRow[0];
-                }
-                else {
-                    return ((service_orderRow[])(base.GetChildRows(this.Table.ChildRelations["serord_fk_equipID"])));
-                }
             }
         }
         
@@ -7917,17 +7795,6 @@ namespace FinalProject {
                     return ((order_lineRow[])(base.GetChildRows(this.Table.ChildRelations["orderline_fk_receiptID"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public service_orderRow[] Getservice_orderRows() {
-                if ((this.Table.ChildRelations["serord_fk_reseiptID"] == null)) {
-                    return new service_orderRow[0];
-                }
-                else {
-                    return ((service_orderRow[])(base.GetChildRows(this.Table.ChildRelations["serord_fk_reseiptID"])));
-                }
-            }
         }
         
         /// <summary>
@@ -8038,17 +7905,6 @@ namespace FinalProject {
             public void SetserPriceNull() {
                 this[this.tableservice.serPriceColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public service_orderRow[] Getservice_orderRows() {
-                if ((this.Table.ChildRelations["serord_fk_serviceID"] == null)) {
-                    return new service_orderRow[0];
-                }
-                else {
-                    return ((service_orderRow[])(base.GetChildRows(this.Table.ChildRelations["serord_fk_serviceID"])));
-                }
-            }
         }
         
         /// <summary>
@@ -8137,94 +7993,6 @@ namespace FinalProject {
                 }
                 set {
                     this[this.tableservice_order.serordWarrantyColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int receiptID {
-                get {
-                    return ((int)(this[this.tableservice_order.receiptIDColumn]));
-                }
-                set {
-                    this[this.tableservice_order.receiptIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int serviceID {
-                get {
-                    return ((int)(this[this.tableservice_order.serviceIDColumn]));
-                }
-                set {
-                    this[this.tableservice_order.serviceIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int equipID {
-                get {
-                    return ((int)(this[this.tableservice_order.equipIDColumn]));
-                }
-                set {
-                    this[this.tableservice_order.equipIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int empID {
-                get {
-                    return ((int)(this[this.tableservice_order.empIDColumn]));
-                }
-                set {
-                    this[this.tableservice_order.empIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public employeeRow employeeRow {
-                get {
-                    return ((employeeRow)(this.GetParentRow(this.Table.ParentRelations["serord_fk_empID"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["serord_fk_empID"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public equipmentRow equipmentRow {
-                get {
-                    return ((equipmentRow)(this.GetParentRow(this.Table.ParentRelations["serord_fk_equipID"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["serord_fk_equipID"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public receiptRow receiptRow {
-                get {
-                    return ((receiptRow)(this.GetParentRow(this.Table.ParentRelations["serord_fk_reseiptID"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["serord_fk_reseiptID"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public serviceRow serviceRow {
-                get {
-                    return ((serviceRow)(this.GetParentRow(this.Table.ParentRelations["serord_fk_serviceID"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["serord_fk_serviceID"]);
                 }
             }
             
@@ -14831,14 +14599,10 @@ SELECT id, serName, serDescription, serPrice FROM service WHERE (id = @id)";
             tableMapping.ColumnMappings.Add("serordDateOut", "serordDateOut");
             tableMapping.ColumnMappings.Add("serordIssue", "serordIssue");
             tableMapping.ColumnMappings.Add("serordWarranty", "serordWarranty");
-            tableMapping.ColumnMappings.Add("receiptID", "receiptID");
-            tableMapping.ColumnMappings.Add("serviceID", "serviceID");
-            tableMapping.ColumnMappings.Add("equipID", "equipID");
-            tableMapping.ColumnMappings.Add("empID", "empID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[service_order] WHERE (([id] = @Original_id) AND ((@IsNull_serordDateIn = 1 AND [serordDateIn] IS NULL) OR ([serordDateIn] = @Original_serordDateIn)) AND ((@IsNull_serordDateOut = 1 AND [serordDateOut] IS NULL) OR ([serordDateOut] = @Original_serordDateOut)) AND ((@IsNull_serordIssue = 1 AND [serordIssue] IS NULL) OR ([serordIssue] = @Original_serordIssue)) AND ((@IsNull_serordWarranty = 1 AND [serordWarranty] IS NULL) OR ([serordWarranty] = @Original_serordWarranty)) AND ([receiptID] = @Original_receiptID) AND ([serviceID] = @Original_serviceID) AND ([equipID] = @Original_equipID) AND ([empID] = @Original_empID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [service_order] WHERE (([id] = @Original_id) AND ((@IsNull_serordDateIn = 1 AND [serordDateIn] IS NULL) OR ([serordDateIn] = @Original_serordDateIn)) AND ((@IsNull_serordDateOut = 1 AND [serordDateOut] IS NULL) OR ([serordDateOut] = @Original_serordDateOut)) AND ((@IsNull_serordIssue = 1 AND [serordIssue] IS NULL) OR ([serordIssue] = @Original_serordIssue)) AND ((@IsNull_serordWarranty = 1 AND [serordWarranty] IS NULL) OR ([serordWarranty] = @Original_serordWarranty)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_serordDateIn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateIn", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -14849,36 +14613,15 @@ SELECT id, serName, serDescription, serPrice FROM service WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_serordIssue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordIssue", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_serordWarranty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordWarranty", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_serordWarranty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordWarranty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_receiptID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiptID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_serviceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serviceID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_equipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "equipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_empID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[service_order] ([serordDateIn], [serordDateOut], [serordIssue], [serordWarranty], [receiptID], [serviceID], [equipID], [empID]) VALUES (@serordDateIn, @serordDateOut, @serordIssue, @serordWarranty, @receiptID, @serviceID, @equipID, @empID);
-SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, serviceID, equipID, empID FROM service_order WHERE (id = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordDateIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordDateOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordIssue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordIssue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordWarranty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordWarranty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@receiptID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiptID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serviceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serviceID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@equipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "equipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[service_order] SET [serordDateIn] = @serordDateIn, [serordDateOut] = @serordDateOut, [serordIssue] = @serordIssue, [serordWarranty] = @serordWarranty, [receiptID] = @receiptID, [serviceID] = @serviceID, [equipID] = @equipID, [empID] = @empID WHERE (([id] = @Original_id) AND ((@IsNull_serordDateIn = 1 AND [serordDateIn] IS NULL) OR ([serordDateIn] = @Original_serordDateIn)) AND ((@IsNull_serordDateOut = 1 AND [serordDateOut] IS NULL) OR ([serordDateOut] = @Original_serordDateOut)) AND ((@IsNull_serordIssue = 1 AND [serordIssue] IS NULL) OR ([serordIssue] = @Original_serordIssue)) AND ((@IsNull_serordWarranty = 1 AND [serordWarranty] IS NULL) OR ([serordWarranty] = @Original_serordWarranty)) AND ([receiptID] = @Original_receiptID) AND ([serviceID] = @Original_serviceID) AND ([equipID] = @Original_equipID) AND ([empID] = @Original_empID));
-SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, serviceID, equipID, empID FROM service_order WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [service_order] SET [serordDateIn] = @serordDateIn, [serordDateOut] = @serordDateOut, [serordIssue] = @serordIssue, [serordWarranty] = @serordWarranty WHERE (([id] = @Original_id) AND ((@IsNull_serordDateIn = 1 AND [serordDateIn] IS NULL) OR ([serordDateIn] = @Original_serordDateIn)) AND ((@IsNull_serordDateOut = 1 AND [serordDateOut] IS NULL) OR ([serordDateOut] = @Original_serordDateOut)) AND ((@IsNull_serordIssue = 1 AND [serordIssue] IS NULL) OR ([serordIssue] = @Original_serordIssue)) AND ((@IsNull_serordWarranty = 1 AND [serordWarranty] IS NULL) OR ([serordWarranty] = @Original_serordWarranty)));
+SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty FROM service_order WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordDateIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordDateOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordIssue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordIssue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serordWarranty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordWarranty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@receiptID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiptID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serviceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serviceID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@equipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "equipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_serordDateIn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateIn", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_serordDateIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -14888,10 +14631,6 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_serordIssue", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordIssue", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_serordWarranty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordWarranty", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_serordWarranty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serordWarranty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_receiptID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiptID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_serviceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serviceID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_equipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "equipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_empID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "empID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -14899,37 +14638,63 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FinalProject.Properties.Settings.Default.EmmasConnectionString;
+            this._connection.ConnectionString = global::FinalProject.Properties.Settings.Default.EmmasConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, s" +
-                "erviceID, equipID, empID FROM dbo.service_order";
+            this._commandCollection[0].CommandText = "SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty\r\nFROM     ser" +
+                "vice_order\r\nWHERE  (serordDateIn = @Param1) AND (serordDateOut = @Param2)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param2", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, s" +
-                "erviceID, equipID, empID FROM dbo.service_order";
+            this._commandCollection[1].CommandText = "SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty\r\nFROM     ser" +
+                "vice_order\r\n";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        id, serordDateIn, serordDateOut, serordIssue, serordWarranty, recei" +
+            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::FinalProject.Properties.Settings.Default.EmmasConnectionString);
+            this._commandCollection[2].CommandText = "SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, s" +
+                "erviceID, equipID, empID FROM dbo.service_order";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::FinalProject.Properties.Settings.Default.EmmasConnectionString);
+            this._commandCollection[3].CommandText = "SELECT        id, serordDateIn, serordDateOut, serordIssue, serordWarranty, recei" +
                 "ptID, serviceID, equipID, empID\r\nFROM            service_order\r\nORDER BY serordD" +
                 "ateIn, serordDateOut";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty\r\nFROM     ser" +
+                "vice_order\r\nWHERE  (serordDateIn = @date1) AND (serordDateOut = @date2)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date1", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date2", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "serordDateOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(EmmasDataSet.service_orderDataTable dataTable) {
+        public virtual int Fill(EmmasDataSet.service_orderDataTable dataTable, string Param1, string Param2) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Param1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -14941,8 +14706,20 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual EmmasDataSet.service_orderDataTable GetData() {
+        public virtual EmmasDataSet.service_orderDataTable GetData(string Param1, string Param2) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Param1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
             EmmasDataSet.service_orderDataTable dataTable = new EmmasDataSet.service_orderDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -14952,7 +14729,7 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(EmmasDataSet.service_orderDataTable dataTable) {
+        public virtual int Fill1(EmmasDataSet.service_orderDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14965,8 +14742,46 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(EmmasDataSet.service_orderDataTable dataTable) {
+        public virtual int FillBy(EmmasDataSet.service_orderDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(EmmasDataSet.service_orderDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy2(EmmasDataSet.service_orderDataTable dataTable, string date1, string date2) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((date1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(date1));
+            }
+            if ((date2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(date2));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -15001,243 +14816,6 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, global::System.Nullable<global::System.DateTime> Original_serordDateIn, global::System.Nullable<global::System.DateTime> Original_serordDateOut, string Original_serordIssue, global::System.Nullable<bool> Original_serordWarranty, int Original_receiptID, int Original_serviceID, int Original_equipID, int Original_empID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            if ((Original_serordDateIn.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_serordDateIn.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Original_serordDateOut.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_serordDateOut.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_serordIssue == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_serordIssue));
-            }
-            if ((Original_serordWarranty.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_serordWarranty.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_receiptID));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_serviceID));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_equipID));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_empID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> serordDateIn, global::System.Nullable<global::System.DateTime> serordDateOut, string serordIssue, global::System.Nullable<bool> serordWarranty, int receiptID, int serviceID, int equipID, int empID) {
-            if ((serordDateIn.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(serordDateIn.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((serordDateOut.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(serordDateOut.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((serordIssue == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(serordIssue));
-            }
-            if ((serordWarranty.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(serordWarranty.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(receiptID));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(serviceID));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(equipID));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(empID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    global::System.Nullable<global::System.DateTime> serordDateIn, 
-                    global::System.Nullable<global::System.DateTime> serordDateOut, 
-                    string serordIssue, 
-                    global::System.Nullable<bool> serordWarranty, 
-                    int receiptID, 
-                    int serviceID, 
-                    int equipID, 
-                    int empID, 
-                    int Original_id, 
-                    global::System.Nullable<global::System.DateTime> Original_serordDateIn, 
-                    global::System.Nullable<global::System.DateTime> Original_serordDateOut, 
-                    string Original_serordIssue, 
-                    global::System.Nullable<bool> Original_serordWarranty, 
-                    int Original_receiptID, 
-                    int Original_serviceID, 
-                    int Original_equipID, 
-                    int Original_empID, 
-                    int id) {
-            if ((serordDateIn.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(serordDateIn.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((serordDateOut.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(serordDateOut.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((serordIssue == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(serordIssue));
-            }
-            if ((serordWarranty.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(serordWarranty.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(receiptID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(serviceID));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(equipID));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(empID));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id));
-            if ((Original_serordDateIn.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_serordDateIn.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_serordDateOut.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_serordDateOut.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_serordIssue == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_serordIssue));
-            }
-            if ((Original_serordWarranty.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_serordWarranty.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_receiptID));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_serviceID));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_equipID));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_empID));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    global::System.Nullable<global::System.DateTime> serordDateIn, 
-                    global::System.Nullable<global::System.DateTime> serordDateOut, 
-                    string serordIssue, 
-                    global::System.Nullable<bool> serordWarranty, 
-                    int receiptID, 
-                    int serviceID, 
-                    int equipID, 
-                    int empID, 
-                    int Original_id, 
-                    global::System.Nullable<global::System.DateTime> Original_serordDateIn, 
-                    global::System.Nullable<global::System.DateTime> Original_serordDateOut, 
-                    string Original_serordIssue, 
-                    global::System.Nullable<bool> Original_serordWarranty, 
-                    int Original_receiptID, 
-                    int Original_serviceID, 
-                    int Original_equipID, 
-                    int Original_empID) {
-            return this.Update(serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, serviceID, equipID, empID, Original_id, Original_serordDateIn, Original_serordDateOut, Original_serordIssue, Original_serordWarranty, Original_receiptID, Original_serviceID, Original_equipID, Original_empID, Original_id);
         }
     }
     
@@ -15706,24 +15284,6 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._equip_typeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.equip_type.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._equip_typeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.manufacturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._paymentTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.payment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -15742,12 +15302,12 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._equipmentTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.equipment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._equip_typeTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.equip_type.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._equipmentTableAdapter.Update(updatedRows));
+                    result = (result + this._equip_typeTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15757,6 +15317,15 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._inventoryTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.manufacturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15778,12 +15347,12 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._serviceTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.service.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._equipmentTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.equipment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._serviceTableAdapter.Update(updatedRows));
+                    result = (result + this._equipmentTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15811,6 +15380,15 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._order_lineTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._serviceTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.service.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._serviceTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15857,22 +15435,6 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._equip_typeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.equip_type.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._equip_typeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.manufacturer.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._paymentTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.payment.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -15889,11 +15451,11 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._equipmentTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.equipment.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._equip_typeTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.equip_type.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._equipmentTableAdapter.Update(addedRows));
+                    result = (result + this._equip_typeTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15902,6 +15464,14 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._inventoryTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.manufacturer.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15921,11 +15491,11 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._serviceTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.service.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._equipmentTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.equipment.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._serviceTableAdapter.Update(addedRows));
+                    result = (result + this._equipmentTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15950,6 +15520,14 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._order_lineTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._serviceTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.service.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._serviceTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15979,6 +15557,14 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._serviceTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.service.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._serviceTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._order_lineTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.order_line.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -16003,11 +15589,11 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._serviceTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.service.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._equipmentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.equipment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._serviceTableAdapter.Update(deletedRows));
+                    result = (result + this._equipmentTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16027,6 +15613,14 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.manufacturer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._inventoryTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.inventory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -16035,11 +15629,11 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._equipmentTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.equipment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._equip_typeTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.equip_type.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._equipmentTableAdapter.Update(deletedRows));
+                    result = (result + this._equip_typeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16056,22 +15650,6 @@ SELECT id, serordDateIn, serordDateOut, serordIssue, serordWarranty, receiptID, 
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._paymentTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.manufacturer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._equip_typeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.equip_type.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._equip_typeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

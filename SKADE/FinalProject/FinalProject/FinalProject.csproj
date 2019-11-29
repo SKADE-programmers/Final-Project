@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmmasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EmmasWSReportDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmmasWSReportDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmployeDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +303,17 @@
     </None>
     <None Include="EmmasDataSet.xss">
       <DependentUpon>EmmasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmmasWSReportDataSet1.xsc">
+      <DependentUpon>EmmasWSReportDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EmmasWSReportDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmmasWSReportDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EmmasWSReportDataSet1.xss">
+      <DependentUpon>EmmasWSReportDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

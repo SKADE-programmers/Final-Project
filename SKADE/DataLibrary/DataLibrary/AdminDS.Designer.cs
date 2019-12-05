@@ -10349,7 +10349,7 @@ WHERE        (employee.id = @Param1)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        id, custFirst + \' \' + custLast AS \'Customer Name\', custPhone, custA" +
@@ -10369,6 +10369,13 @@ WHERE        (employee.id = @Param1)";
                 "(custFirst + \' \' + custLast LIKE \'%\' + @Param1 + \'%\')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        id, custFirst + \' \' + custLast AS \'Customer Name\', custPhone, custA" +
+                "ddress, custCity, custPostal, custEmail\r\nFROM            customer\r\nWHERE custPho" +
+                "ne = @param1";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param1", global::System.Data.SqlDbType.Char, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10451,6 +10458,42 @@ WHERE        (employee.id = @Param1)";
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            AdminDS.CustomerSimpleDataTable dataTable = new AdminDS.CustomerSimpleDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPhone(AdminDS.CustomerSimpleDataTable dataTable, string param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((param1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(param1));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual AdminDS.CustomerSimpleDataTable GetDataByPhone(string param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((param1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(param1));
             }
             AdminDS.CustomerSimpleDataTable dataTable = new AdminDS.CustomerSimpleDataTable();
             this.Adapter.Fill(dataTable);
@@ -11628,7 +11671,7 @@ FROM            service_order INNER JOIN
                          customer ON receipt.custID = customer.id INNER JOIN
                          equipment ON service_order.equipID = equipment.id AND customer.id = equipment.custID INNER JOIN
                          manufacturer ON equipment.equManuID = manufacturer.id
-WHERE        (service_order.serordWarranty = 'True') AND (receipt.ordDate > @param1) AND (receipt.ordDate < @param2)";
+WHERE        (receipt.ordDate > @param1) AND (receipt.ordDate < @param2)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param1", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "ordDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param2", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "ordDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

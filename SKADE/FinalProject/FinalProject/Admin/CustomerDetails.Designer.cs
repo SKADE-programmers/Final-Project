@@ -34,7 +34,7 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.customerid = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.adminDS2 = new DataLibrary.AdminDS();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblPass = new System.Windows.Forms.Label();
@@ -43,112 +43,116 @@
             this.lblLast = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lblFirst = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.PhoneNumber = new System.Windows.Forms.Label();
+            this.lblphone = new System.Windows.Forms.Label();
             this.lblLastis = new System.Windows.Forms.Label();
             this.lblFirstis = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.postal = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.Address = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPostal = new System.Windows.Forms.TextBox();
+            this.lblpostal = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lbladdress = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Email = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblemail = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblcity = new System.Windows.Forms.Label();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.lblphonedet = new System.Windows.Forms.Label();
+            this.label4city = new System.Windows.Forms.Label();
+            this.lblAddressdes = new System.Windows.Forms.Label();
+            this.lblPostaldes = new System.Windows.Forms.Label();
+            this.lblEmaildes = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.adminDS2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(63, 375);
+            this.button1.Location = new System.Drawing.Point(26, 257);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 35);
             this.button1.TabIndex = 80;
             this.button1.Text = "Return";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btnCreate.Location = new System.Drawing.Point(175, 375);
+            this.btnCreate.Location = new System.Drawing.Point(157, 257);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(95, 35);
+            this.btnCreate.Size = new System.Drawing.Size(102, 35);
             this.btnCreate.TabIndex = 78;
             this.btnCreate.Text = "Create New Customer";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
             // txtLast
             // 
-            this.txtLast.Location = new System.Drawing.Point(453, 147);
+            this.txtLast.Location = new System.Drawing.Point(173, 147);
             this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(138, 20);
+            this.txtLast.Size = new System.Drawing.Size(154, 20);
             this.txtLast.TabIndex = 75;
             this.txtLast.Visible = false;
             // 
             // txtFirst
             // 
-            this.txtFirst.Location = new System.Drawing.Point(453, 104);
+            this.txtFirst.Location = new System.Drawing.Point(173, 107);
             this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(138, 20);
+            this.txtFirst.Size = new System.Drawing.Size(156, 20);
             this.txtFirst.TabIndex = 74;
             this.txtFirst.Visible = false;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(453, 68);
+            this.txtID.Location = new System.Drawing.Point(173, 64);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(138, 20);
+            this.txtID.Size = new System.Drawing.Size(156, 20);
             this.txtID.TabIndex = 73;
             this.txtID.Visible = false;
+            this.txtID.TextChanged += new System.EventHandler(this.TxtID_TextChanged);
             // 
             // customerid
             // 
             this.customerid.AutoSize = true;
             this.customerid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerid.Location = new System.Drawing.Point(296, 68);
+            this.customerid.Location = new System.Drawing.Point(39, 64);
             this.customerid.Name = "customerid";
             this.customerid.Size = new System.Drawing.Size(115, 20);
             this.customerid.TabIndex = 72;
             this.customerid.Text = "Customer ID:";
             // 
-            // listBox1
+            // adminDS2
             // 
-            this.listBox1.DisplayMember = "EmployeeSimple.empFirst";
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(63, 40);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(207, 329);
-            this.listBox1.TabIndex = 71;
-            this.listBox1.TabStop = false;
-            this.listBox1.ValueMember = "EmployeeSimple.id";
+            this.adminDS2.DataSetName = "AdminDS";
+            this.adminDS2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(573, 380);
+            this.btnSave.Location = new System.Drawing.Point(595, 257);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(79, 35);
             this.btnSave.TabIndex = 69;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(453, 380);
+            this.btnDelete.Location = new System.Drawing.Point(453, 257);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(76, 35);
             this.btnDelete.TabIndex = 70;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // lblPass
             // 
@@ -177,61 +181,60 @@
             // lblLast
             // 
             this.lblLast.AutoSize = true;
-            this.lblLast.Location = new System.Drawing.Point(471, 150);
+            this.lblLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLast.Location = new System.Drawing.Point(169, 145);
             this.lblLast.Name = "lblLast";
-            this.lblLast.Size = new System.Drawing.Size(0, 13);
+            this.lblLast.Size = new System.Drawing.Size(55, 20);
             this.lblLast.TabIndex = 65;
+            this.lblLast.Text = "lblLast";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(471, 73);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(169, 68);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 13);
+            this.lblID.Size = new System.Drawing.Size(41, 20);
             this.lblID.TabIndex = 64;
+            this.lblID.Text = "lblID";
             // 
             // lblFirst
             // 
             this.lblFirst.AutoSize = true;
-            this.lblFirst.Location = new System.Drawing.Point(471, 111);
+            this.lblFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirst.Location = new System.Drawing.Point(169, 107);
             this.lblFirst.Name = "lblFirst";
-            this.lblFirst.Size = new System.Drawing.Size(0, 13);
+            this.lblFirst.Size = new System.Drawing.Size(55, 20);
             this.lblFirst.TabIndex = 63;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(624, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 62;
-            this.pictureBox1.TabStop = false;
+            this.lblFirst.Text = "lblFirst";
+            this.lblFirst.Click += new System.EventHandler(this.LblFirst_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(331, 380);
+            this.btnEdit.Location = new System.Drawing.Point(320, 257);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(69, 35);
             this.btnEdit.TabIndex = 60;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
-            // PhoneNumber
+            // lblphone
             // 
-            this.PhoneNumber.AutoSize = true;
-            this.PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber.Location = new System.Drawing.Point(296, 180);
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.Size = new System.Drawing.Size(132, 20);
-            this.PhoneNumber.TabIndex = 56;
-            this.PhoneNumber.Text = "Phone Number:";
+            this.lblphone.AutoSize = true;
+            this.lblphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblphone.Location = new System.Drawing.Point(39, 183);
+            this.lblphone.Name = "lblphone";
+            this.lblphone.Size = new System.Drawing.Size(132, 20);
+            this.lblphone.TabIndex = 56;
+            this.lblphone.Text = "Phone Number:";
             // 
             // lblLastis
             // 
             this.lblLastis.AutoSize = true;
             this.lblLastis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastis.Location = new System.Drawing.Point(296, 145);
+            this.lblLastis.Location = new System.Drawing.Point(39, 145);
             this.lblLastis.Name = "lblLastis";
             this.lblLastis.Size = new System.Drawing.Size(95, 20);
             this.lblLastis.TabIndex = 59;
@@ -241,7 +244,7 @@
             // 
             this.lblFirstis.AutoSize = true;
             this.lblFirstis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstis.Location = new System.Drawing.Point(296, 104);
+            this.lblFirstis.Location = new System.Drawing.Point(39, 107);
             this.lblFirstis.Name = "lblFirstis";
             this.lblFirstis.Size = new System.Drawing.Size(96, 20);
             this.lblFirstis.TabIndex = 55;
@@ -257,50 +260,49 @@
             this.label2.TabIndex = 81;
             this.label2.Text = "Customer Details";
             // 
-            // txtPass
+            // txtPostal
             // 
-            this.txtPass.Location = new System.Drawing.Point(453, 259);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.ReadOnly = true;
-            this.txtPass.Size = new System.Drawing.Size(138, 20);
-            this.txtPass.TabIndex = 77;
-            this.txtPass.Visible = false;
+            this.txtPostal.Location = new System.Drawing.Point(525, 145);
+            this.txtPostal.Name = "txtPostal";
+            this.txtPostal.Size = new System.Drawing.Size(160, 20);
+            this.txtPostal.TabIndex = 77;
+            this.txtPostal.Visible = false;
             // 
-            // postal
+            // lblpostal
             // 
-            this.postal.AutoSize = true;
-            this.postal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postal.Location = new System.Drawing.Point(296, 257);
-            this.postal.Name = "postal";
-            this.postal.Size = new System.Drawing.Size(64, 20);
-            this.postal.TabIndex = 58;
-            this.postal.Text = "Postal:";
+            this.lblpostal.AutoSize = true;
+            this.lblpostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpostal.Location = new System.Drawing.Point(427, 145);
+            this.lblpostal.Name = "lblpostal";
+            this.lblpostal.Size = new System.Drawing.Size(64, 20);
+            this.lblpostal.TabIndex = 58;
+            this.lblpostal.Text = "Postal:";
             // 
-            // txtLogin
+            // txtAddress
             // 
-            this.txtLogin.Location = new System.Drawing.Point(453, 224);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.ReadOnly = true;
-            this.txtLogin.Size = new System.Drawing.Size(138, 20);
-            this.txtLogin.TabIndex = 76;
-            this.txtLogin.Visible = false;
+            this.txtAddress.Location = new System.Drawing.Point(525, 68);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(160, 20);
+            this.txtAddress.TabIndex = 76;
+            this.txtAddress.Visible = false;
             // 
-            // Address
+            // lbladdress
             // 
-            this.Address.AutoSize = true;
-            this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(296, 224);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(80, 20);
-            this.Address.TabIndex = 57;
-            this.Address.Text = "Address:";
+            this.lbladdress.AutoSize = true;
+            this.lbladdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbladdress.Location = new System.Drawing.Point(427, 68);
+            this.lbladdress.Name = "lbladdress";
+            this.lbladdress.Size = new System.Drawing.Size(80, 20);
+            this.lbladdress.TabIndex = 57;
+            this.lbladdress.Text = "Address:";
             // 
-            // textBox1
+            // txtPhone
             // 
-            this.textBox1.Location = new System.Drawing.Point(453, 183);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 82;
+            this.txtPhone.Location = new System.Drawing.Point(173, 185);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(156, 20);
+            this.txtPhone.TabIndex = 82;
+            this.txtPhone.Visible = false;
             // 
             // label1
             // 
@@ -310,32 +312,23 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 84;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(453, 297);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 87;
-            this.textBox2.Visible = false;
+            this.txtEmail.Location = new System.Drawing.Point(525, 187);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(160, 20);
+            this.txtEmail.TabIndex = 87;
+            this.txtEmail.Visible = false;
             // 
-            // label3
+            // lblemail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(471, 295);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 86;
-            // 
-            // Email
-            // 
-            this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(296, 295);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(58, 20);
-            this.Email.TabIndex = 85;
-            this.Email.Text = "Email:";
+            this.lblemail.AutoSize = true;
+            this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemail.Location = new System.Drawing.Point(427, 185);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(58, 20);
+            this.lblemail.TabIndex = 85;
+            this.lblemail.Text = "Email:";
             // 
             // label5
             // 
@@ -345,27 +338,97 @@
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 89;
             // 
+            // lblcity
+            // 
+            this.lblcity.AutoSize = true;
+            this.lblcity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcity.Location = new System.Drawing.Point(427, 107);
+            this.lblcity.Name = "lblcity";
+            this.lblcity.Size = new System.Drawing.Size(44, 20);
+            this.lblcity.TabIndex = 90;
+            this.lblcity.Text = "City:";
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(525, 107);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(160, 20);
+            this.txtCity.TabIndex = 91;
+            this.txtCity.Visible = false;
+            // 
+            // lblphonedet
+            // 
+            this.lblphonedet.AutoSize = true;
+            this.lblphonedet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblphonedet.Location = new System.Drawing.Point(169, 183);
+            this.lblphonedet.Name = "lblphonedet";
+            this.lblphonedet.Size = new System.Drawing.Size(69, 20);
+            this.lblphonedet.TabIndex = 57;
+            this.lblphonedet.Text = "lblphone";
+            // 
+            // label4city
+            // 
+            this.label4city.AutoSize = true;
+            this.label4city.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4city.Location = new System.Drawing.Point(521, 107);
+            this.label4city.Name = "label4city";
+            this.label4city.Size = new System.Drawing.Size(39, 20);
+            this.label4city.TabIndex = 92;
+            this.label4city.Text = "City:";
+            // 
+            // lblAddressdes
+            // 
+            this.lblAddressdes.AutoSize = true;
+            this.lblAddressdes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressdes.Location = new System.Drawing.Point(521, 68);
+            this.lblAddressdes.Name = "lblAddressdes";
+            this.lblAddressdes.Size = new System.Drawing.Size(69, 20);
+            this.lblAddressdes.TabIndex = 57;
+            this.lblAddressdes.Text = "lblphone";
+            // 
+            // lblPostaldes
+            // 
+            this.lblPostaldes.AutoSize = true;
+            this.lblPostaldes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPostaldes.Location = new System.Drawing.Point(521, 147);
+            this.lblPostaldes.Name = "lblPostaldes";
+            this.lblPostaldes.Size = new System.Drawing.Size(57, 20);
+            this.lblPostaldes.TabIndex = 58;
+            this.lblPostaldes.Text = "Postal:";
+            // 
+            // lblEmaildes
+            // 
+            this.lblEmaildes.AutoSize = true;
+            this.lblEmaildes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmaildes.Location = new System.Drawing.Point(521, 185);
+            this.lblEmaildes.Name = "lblEmaildes";
+            this.lblEmaildes.Size = new System.Drawing.Size(52, 20);
+            this.lblEmaildes.TabIndex = 85;
+            this.lblEmaildes.Text = "Email:";
+            // 
             // CustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4city);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.lblcity);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Email);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmaildes);
+            this.Controls.Add(this.lblemail);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.txtPostal);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtLast);
             this.Controls.Add(this.txtFirst);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.customerid);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblPass);
@@ -374,16 +437,19 @@
             this.Controls.Add(this.lblLast);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblFirst);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.postal);
+            this.Controls.Add(this.lblPostaldes);
+            this.Controls.Add(this.lblpostal);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.Address);
-            this.Controls.Add(this.PhoneNumber);
+            this.Controls.Add(this.lblAddressdes);
+            this.Controls.Add(this.lblphonedet);
+            this.Controls.Add(this.lbladdress);
+            this.Controls.Add(this.lblphone);
             this.Controls.Add(this.lblLastis);
             this.Controls.Add(this.lblFirstis);
             this.Name = "CustomerDetails";
             this.Text = "CustomerDetails";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.CustomerDetails_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.adminDS2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,7 +463,6 @@
         private System.Windows.Forms.TextBox txtFirst;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label customerid;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblPass;
@@ -406,21 +471,27 @@
         private System.Windows.Forms.Label lblLast;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblFirst;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Label PhoneNumber;
+        private System.Windows.Forms.Label lblphone;
         private System.Windows.Forms.Label lblLastis;
         private System.Windows.Forms.Label lblFirstis;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label postal;
-        private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.Label Address;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPostal;
+        private System.Windows.Forms.Label lblpostal;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lbladdress;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblcity;
+        private System.Windows.Forms.TextBox txtCity;
+        private DataLibrary.AdminDS adminDS2;
+        private System.Windows.Forms.Label lblphonedet;
+        private System.Windows.Forms.Label label4city;
+        private System.Windows.Forms.Label lblAddressdes;
+        private System.Windows.Forms.Label lblPostaldes;
+        private System.Windows.Forms.Label lblEmaildes;
     }
 }

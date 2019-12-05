@@ -34,23 +34,36 @@ namespace FinalProject
 
         private void CustomerDetails_Click(object sender, EventArgs e)
         {
-            CustomerDetails customerdetails = new CustomerDetails();
+            int selectedRowindex = dgv.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedrow = dgv.Rows[selectedRowindex];
+            int id = Convert.ToInt32(selectedrow.Cells["Column1"].Value);
+            CustomerDetails customerdetails = new CustomerDetails(id);
             customerdetails.Show();
             this.Hide();
         }
 
         private void EditCustomer_Click(object sender, EventArgs e)
         {
-            CustomerEdit customerEdit = new CustomerEdit();
-            customerEdit.Show();
-            this.Hide();
+          
         }
 
         private void CreateCustomer_Click(object sender, EventArgs e)
         {
             CustomerCreate customerCreate = new CustomerCreate();
+
+            customerCreate.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             customerCreate.Show();
             this.Hide();
+        }
+
+        private void ChildFormClosing(object sender, EventArgs e)
+        {
+            customerTableAdapter ddl = new customerTableAdapter();
+            ddl.Fill(adminDS1.customer);
+            CustomerSimpleTableAdapter cust = new CustomerSimpleTableAdapter();
+            cust.Fill(adminDS1.CustomerSimple);
+            this.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -69,7 +82,7 @@ namespace FinalProject
             string criteria = "";
             criteria += rows = (criteria.Length > 0) ? adminDS1.CustomerSimple.Select(criteria) : adminDS1.CustomerSimple.Select();
             DisplayCustomer();
-            
+           
            
 
         }
@@ -79,7 +92,7 @@ namespace FinalProject
         {
             CustomerSimpleTableAdapter customerSimple = new CustomerSimpleTableAdapter();
             customerSimple.FillBy1(adminDS1.CustomerSimple, textBox1.Text);
-
+           
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -41,6 +41,7 @@ namespace FinalProject
             custom.cusCity = textBox5.Text;
             custom.cusPostal = textBox6.Text;
             custom.cusEmail = textBox7.Text;
+
             try
             {
                 if (custom.cusFirstName == "" || custom.cusLastName == "" || custom.phone == "" || custom.cusAddress == "" || custom.cusCity == "" || custom.cusPostal == "" || custom.cusEmail == "")
@@ -53,6 +54,7 @@ namespace FinalProject
                     customer.CreateCustomer(custom.cusFirstName, custom.cusLastName, custom.phone, custom.cusAddress, custom.cusCity, custom.cusPostal, custom.cusEmail);
 
                     MessageBox.Show("Create Successfully", "Create", MessageBoxButtons.OK);
+                    this.Close();
                 }
             }
             catch (Exception ex)

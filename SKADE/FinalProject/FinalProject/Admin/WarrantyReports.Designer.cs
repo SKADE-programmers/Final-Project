@@ -1,6 +1,6 @@
 ﻿namespace FinalProject
 {
-    partial class frmWarrantyReports
+    partial class WarrantyReports
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,8 @@
             this.lblWarrantyStartDate = new System.Windows.Forms.Label();
             this.lblWarrantyEndDate = new System.Windows.Forms.Label();
             this.dgvSearchResults = new System.Windows.Forms.DataGridView();
-            this.serviceorderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adminDS1 = new DataLibrary.AdminDS();
+            this.serviceorderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lblTitleWarrantyReportSearch = new System.Windows.Forms.Label();
             this.lblSpecificDay = new System.Windows.Forms.Label();
             this.lblSpecificMonth = new System.Windows.Forms.Label();
@@ -48,16 +49,12 @@
             this.dtpWarrantyEndDate = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpWarrantyStartDate = new System.Windows.Forms.DateTimePicker();
-            this.emmasWSReportDataSet1 = new DataLibrary.EmmasDataSet();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.emmasDataSet = new DataLibrary.EmmasDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceorderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceorderBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emmasWSReportDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emmasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWarrantyStartDate
@@ -83,31 +80,30 @@
             this.dgvSearchResults.AllowUserToDeleteRows = false;
             this.dgvSearchResults.AutoGenerateColumns = false;
             this.dgvSearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewCheckBoxColumn1});
-            this.dgvSearchResults.DataSource = this.serviceorderBindingSource;
+            this.dgvSearchResults.DataSource = this.adminDS1;
             this.dgvSearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSearchResults.Location = new System.Drawing.Point(0, 0);
             this.dgvSearchResults.Name = "dgvSearchResults";
             this.dgvSearchResults.ReadOnly = true;
-            this.dgvSearchResults.Size = new System.Drawing.Size(559, 485);
+            this.dgvSearchResults.RowHeadersWidth = 51;
+            this.dgvSearchResults.Size = new System.Drawing.Size(557, 501);
             this.dgvSearchResults.TabIndex = 4;
             // 
-            // serviceorderBindingSource
+            // adminDS1
             // 
-            this.serviceorderBindingSource.DataMember = "service_order";
-            this.serviceorderBindingSource.DataSource = this.emmasWSReportDataSet1;
+            this.adminDS1.DataSetName = "AdminDS";
+            this.adminDS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // serviceorderBindingSource1
+            // 
+            this.serviceorderBindingSource1.DataMember = "service_order";
             // 
             // lblTitleWarrantyReportSearch
             // 
             this.lblTitleWarrantyReportSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleWarrantyReportSearch.Location = new System.Drawing.Point(287, 25);
+            this.lblTitleWarrantyReportSearch.Location = new System.Drawing.Point(367, 20);
             this.lblTitleWarrantyReportSearch.Name = "lblTitleWarrantyReportSearch";
-            this.lblTitleWarrantyReportSearch.Size = new System.Drawing.Size(208, 31);
+            this.lblTitleWarrantyReportSearch.Size = new System.Drawing.Size(184, 20);
             this.lblTitleWarrantyReportSearch.TabIndex = 5;
             this.lblTitleWarrantyReportSearch.Text = "Warranty Report Search";
             // 
@@ -212,6 +208,7 @@
             // 
             // dtpWarrantyEndDate
             // 
+            this.dtpWarrantyEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpWarrantyEndDate.Location = new System.Drawing.Point(667, 95);
             this.dtpWarrantyEndDate.Name = "dtpWarrantyEndDate";
             this.dtpWarrantyEndDate.Size = new System.Drawing.Size(212, 20);
@@ -222,61 +219,27 @@
             this.panel1.Controls.Add(this.dgvSearchResults);
             this.panel1.Location = new System.Drawing.Point(0, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(559, 485);
+            this.panel1.Size = new System.Drawing.Size(557, 501);
             this.panel1.TabIndex = 31;
             // 
             // dtpWarrantyStartDate
             // 
+            this.dtpWarrantyStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpWarrantyStartDate.Location = new System.Drawing.Point(667, 53);
             this.dtpWarrantyStartDate.Name = "dtpWarrantyStartDate";
             this.dtpWarrantyStartDate.Size = new System.Drawing.Size(212, 20);
             this.dtpWarrantyStartDate.TabIndex = 32;
             // 
-            // emmasWSReportDataSet1
+            // emmasDataSet
             // 
-            this.emmasWSReportDataSet1.DataSetName = "emmasWSReportDataSet1";
-            this.emmasWSReportDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.emmasDataSet.DataSetName = "EmmasDataSet";
+            this.emmasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "serordDateIn";
-            this.dataGridViewTextBoxColumn2.HeaderText = "serordDateIn";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "serordDateOut";
-            this.dataGridViewTextBoxColumn3.HeaderText = "serordDateOut";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "serordIssue";
-            this.dataGridViewTextBoxColumn4.HeaderText = "serordIssue";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "serordWarranty";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "serordWarranty";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            // 
-            // frmWarrantyReports
+            // WarrantyReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 540);
+            this.ClientSize = new System.Drawing.Size(880, 554);
             this.Controls.Add(this.dtpWarrantyStartDate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtpWarrantyEndDate);
@@ -295,13 +258,14 @@
             this.Controls.Add(this.lblWarrantyEndDate);
             this.Controls.Add(this.lblWarrantyStartDate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmWarrantyReports";
+            this.Name = "WarrantyReports";
             this.Text = "frmWarrantyReports";
             this.Load += new System.EventHandler(this.FrmWarrantyReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceorderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceorderBindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.emmasWSReportDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emmasDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,19 +291,16 @@
         private System.Windows.Forms.DateTimePicker dtpWarrantyEndDate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpWarrantyStartDate;
-        //private EmmasWSReportDataSet1 emmasWSReportDataSet1;
-        private System.Windows.Forms.BindingSource serviceorderBindingSource;
-       // private EmmasWSReportDataSet1TableAdapters.service_orderTableAdapter service_orderTableAdapter;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serordDateInDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serordDateOutDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serordIssueDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn serordWarrantyDataGridViewCheckBoxColumn;
-        private DataLibrary.EmmasDataSet emmasWSReportDataSet1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+      //  private EmmasDataSetTableAdapters.service_orderTableAdapter service_orderTableAdapter;
+        private System.Windows.Forms.BindingSource serviceorderBindingSource1;
+     //   private EmmasDataSet emmasDataSet;
+        private DataLibrary.AdminDS adminDS1;
+        private DataLibrary.EmmasDataSet emmasDataSet;
     }
 }

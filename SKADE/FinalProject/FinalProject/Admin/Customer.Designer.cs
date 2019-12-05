@@ -33,21 +33,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.list = new System.Windows.Forms.Label();
             this.CreateCustomer = new System.Windows.Forms.Button();
-            this.EditCustomer = new System.Windows.Forms.Button();
             this.CustomerDetails = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.adminDS1 = new DataLibrary.AdminDS();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custPostal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adminDS1 = new DataLibrary.AdminDS();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.EditCustomer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // CustomerSearch
@@ -103,17 +104,6 @@
             this.CreateCustomer.UseVisualStyleBackColor = true;
             this.CreateCustomer.Click += new System.EventHandler(this.CreateCustomer_Click);
             // 
-            // EditCustomer
-            // 
-            this.EditCustomer.Location = new System.Drawing.Point(614, 68);
-            this.EditCustomer.Margin = new System.Windows.Forms.Padding(2);
-            this.EditCustomer.Name = "EditCustomer";
-            this.EditCustomer.Size = new System.Drawing.Size(134, 23);
-            this.EditCustomer.TabIndex = 6;
-            this.EditCustomer.Text = "Edit Customer";
-            this.EditCustomer.UseVisualStyleBackColor = true;
-            this.EditCustomer.Click += new System.EventHandler(this.EditCustomer_Click);
-            // 
             // CustomerDetails
             // 
             this.CustomerDetails.Location = new System.Drawing.Point(614, 25);
@@ -138,79 +128,118 @@
             this.comboBox1.ValueMember = "customer.id";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
+            // adminDS1
+            // 
+            this.adminDS1.DataSetName = "AdminDS";
+            this.adminDS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // id
             // 
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            this.id.Width = 125;
             // 
             // dgv
             // 
             this.dgv.AutoGenerateColumns = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.dataGridViewTextBoxColumn1,
             this.custPhone,
             this.custAddress,
             this.custCity,
             this.custPostal,
-            this.custEmail,
-            this.Column1});
+            this.custEmail});
+            this.dgv.DataMember = "CustomerSimple";
             this.dgv.DataSource = this.adminDS1;
-            this.dgv.Location = new System.Drawing.Point(2, 196);
+            this.dgv.Location = new System.Drawing.Point(3, 181);
             this.dgv.Name = "dgv";
+            this.dgv.RowHeadersWidth = 51;
             this.dgv.Size = new System.Drawing.Size(818, 271);
             this.dgv.TabIndex = 8;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_CellContentClick);
-            // 
-            // custPhone
-            // 
-            this.custPhone.DataPropertyName = "custPhone";
-            this.custPhone.HeaderText = "custPhone";
-            this.custPhone.Name = "custPhone";
-            // 
-            // custAddress
-            // 
-            this.custAddress.DataPropertyName = "custAddress";
-            this.custAddress.HeaderText = "custAddress";
-            this.custAddress.Name = "custAddress";
-            // 
-            // custCity
-            // 
-            this.custCity.DataPropertyName = "custCity";
-            this.custCity.HeaderText = "custCity";
-            this.custCity.Name = "custCity";
-            // 
-            // custPostal
-            // 
-            this.custPostal.DataPropertyName = "custPostal";
-            this.custPostal.HeaderText = "custPostal";
-            this.custPostal.Name = "custPostal";
-            // 
-            // custEmail
-            // 
-            this.custEmail.DataPropertyName = "custEmail";
-            this.custEmail.HeaderText = "custEmail";
-            this.custEmail.Name = "custEmail";
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "id";
             this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
             // 
-            // adminDS1
+            // dataGridViewTextBoxColumn1
             // 
-            this.adminDS1.DataSetName = "AdminDS";
-            this.adminDS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Customer Name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Customer Name";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // custPhone
+            // 
+            this.custPhone.DataPropertyName = "custPhone";
+            this.custPhone.HeaderText = "custPhone";
+            this.custPhone.MinimumWidth = 6;
+            this.custPhone.Name = "custPhone";
+            this.custPhone.Width = 125;
+            // 
+            // custAddress
+            // 
+            this.custAddress.DataPropertyName = "custAddress";
+            this.custAddress.HeaderText = "custAddress";
+            this.custAddress.MinimumWidth = 6;
+            this.custAddress.Name = "custAddress";
+            this.custAddress.Width = 125;
+            // 
+            // custCity
+            // 
+            this.custCity.DataPropertyName = "custCity";
+            this.custCity.HeaderText = "custCity";
+            this.custCity.MinimumWidth = 6;
+            this.custCity.Name = "custCity";
+            this.custCity.Width = 125;
+            // 
+            // custPostal
+            // 
+            this.custPostal.DataPropertyName = "custPostal";
+            this.custPostal.HeaderText = "custPostal";
+            this.custPostal.MinimumWidth = 6;
+            this.custPostal.Name = "custPostal";
+            this.custPostal.Width = 125;
+            // 
+            // custEmail
+            // 
+            this.custEmail.DataPropertyName = "custEmail";
+            this.custEmail.HeaderText = "custEmail";
+            this.custEmail.MinimumWidth = 6;
+            this.custEmail.Name = "custEmail";
+            this.custEmail.Width = 125;
+            // 
+            // EditCustomer
+            // 
+            this.EditCustomer.Location = new System.Drawing.Point(614, 68);
+            this.EditCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.EditCustomer.Name = "EditCustomer";
+            this.EditCustomer.Size = new System.Drawing.Size(134, 23);
+            this.EditCustomer.TabIndex = 6;
+            this.EditCustomer.Text = "Edit Customer";
+            this.EditCustomer.UseVisualStyleBackColor = true;
+            this.EditCustomer.Click += new System.EventHandler(this.EditCustomer_Click);
             // 
             // Customer
             // 
@@ -230,8 +259,8 @@
             this.Name = "Customer";
             this.Text = "Customer";
             this.Load += new System.EventHandler(this.Customer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,17 +274,18 @@
         private System.Windows.Forms.Label list;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button CreateCustomer;
-        private System.Windows.Forms.Button EditCustomer;
         private System.Windows.Forms.Button CustomerDetails;
+        private DataLibrary.AdminDS adminDS1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button EditCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn custPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn custAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn custCity;
         private System.Windows.Forms.DataGridViewTextBoxColumn custPostal;
         private System.Windows.Forms.DataGridViewTextBoxColumn custEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private DataLibrary.AdminDS adminDS1;
     }
 }

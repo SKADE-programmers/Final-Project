@@ -2481,8 +2481,6 @@ namespace DataLibrary {
             
             private global::System.Data.DataColumn columncustEmail;
             
-            private global::System.Data.DataColumn _column__of_Orders;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CustomerDetailsDataTable() {
@@ -2582,14 +2580,6 @@ namespace DataLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ___of_OrdersColumn {
-                get {
-                    return this._column__of_Orders;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2625,7 +2615,7 @@ namespace DataLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CustomerDetailsRow AddCustomerDetailsRow(string custFirst, string custLast, string custPhone, string custAddress, string custCity, string custPostal, string custEmail, int ___of_Orders) {
+            public CustomerDetailsRow AddCustomerDetailsRow(string custFirst, string custLast, string custPhone, string custAddress, string custCity, string custPostal, string custEmail) {
                 CustomerDetailsRow rowCustomerDetailsRow = ((CustomerDetailsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2635,8 +2625,7 @@ namespace DataLibrary {
                         custAddress,
                         custCity,
                         custPostal,
-                        custEmail,
-                        ___of_Orders};
+                        custEmail};
                 rowCustomerDetailsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCustomerDetailsRow);
                 return rowCustomerDetailsRow;
@@ -2674,7 +2663,6 @@ namespace DataLibrary {
                 this.columncustCity = base.Columns["custCity"];
                 this.columncustPostal = base.Columns["custPostal"];
                 this.columncustEmail = base.Columns["custEmail"];
-                this._column__of_Orders = base.Columns["# of Orders"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2696,10 +2684,6 @@ namespace DataLibrary {
                 base.Columns.Add(this.columncustPostal);
                 this.columncustEmail = new global::System.Data.DataColumn("custEmail", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustEmail);
-                this._column__of_Orders = new global::System.Data.DataColumn("# of Orders", typeof(int), null, global::System.Data.MappingType.Element);
-                this._column__of_Orders.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column__of_Orders");
-                this._column__of_Orders.ExtendedProperties.Add("Generator_UserColumnName", "# of Orders");
-                base.Columns.Add(this._column__of_Orders);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -2715,7 +2699,6 @@ namespace DataLibrary {
                 this.columncustCity.MaxLength = 50;
                 this.columncustPostal.MaxLength = 6;
                 this.columncustEmail.MaxLength = 30;
-                this._column__of_Orders.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6998,22 +6981,6 @@ namespace DataLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ___of_Orders {
-                get {
-                    try {
-                        return ((int)(this[this.tableCustomerDetails.___of_OrdersColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'# of Orders\' in table \'CustomerDetails\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCustomerDetails.___of_OrdersColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscustFirstNull() {
                 return this.IsNull(this.tableCustomerDetails.custFirstColumn);
             }
@@ -7094,18 +7061,6 @@ namespace DataLibrary {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcustEmailNull() {
                 this[this.tableCustomerDetails.custEmailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Is___of_OrdersNull() {
-                return this.IsNull(this.tableCustomerDetails.___of_OrdersColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Set___of_OrdersNull() {
-                this[this.tableCustomerDetails.___of_OrdersColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10630,7 +10585,6 @@ WHERE        (employee.id = @Param1)";
             tableMapping.ColumnMappings.Add("custCity", "custCity");
             tableMapping.ColumnMappings.Add("custPostal", "custPostal");
             tableMapping.ColumnMappings.Add("custEmail", "custEmail");
-            tableMapping.ColumnMappings.Add("# of Orders", "# of Orders");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10647,11 +10601,8 @@ WHERE        (employee.id = @Param1)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        customer.id, customer.custFirst, customer.custLast, customer.custPhone, customer.custAddress, customer.custCity, customer.custPostal, customer.custEmail, COUNT(receipt.id) AS '# of Orders'
-FROM            customer INNER JOIN
-                         receipt ON customer.id = receipt.custID
-WHERE        (customer.id = @param1)
-GROUP BY customer.id, customer.custFirst, customer.custLast, customer.custEmail, customer.custPostal, customer.custCity, customer.custAddress, customer.custPhone";
+            this._commandCollection[0].CommandText = "SELECT        id, custFirst, custLast, custPhone, custAddress, custCity, custPost" +
+                "al, custEmail\r\nFROM            customer\r\nWHERE        (id = @param1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();

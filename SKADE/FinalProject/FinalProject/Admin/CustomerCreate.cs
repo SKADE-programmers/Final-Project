@@ -50,9 +50,9 @@ namespace FinalProject
                 }
                 else
                 {
-                    DataTable table = new DataTable();
-                    customer.CreateCustomer(custom.cusFirstName, custom.cusLastName, custom.phone, custom.cusAddress, custom.cusCity, custom.cusPostal, custom.cusEmail);
-
+                    Commands.CreateCustomer(custom.cusFirstName, custom.cusLastName, custom.phone, custom.cusAddress, custom.cusCity, custom.cusPostal, custom.cusEmail);
+                    //DataTable table = new DataTable();
+                   // customer.CreateCustomer(custom.cusFirstName, custom.cusLastName, custom.phone, custom.cusAddress, custom.cusCity, custom.cusPostal, custom.cusEmail);
                     MessageBox.Show("Create Successfully", "Create", MessageBoxButtons.OK);
                     this.Close();
                 }

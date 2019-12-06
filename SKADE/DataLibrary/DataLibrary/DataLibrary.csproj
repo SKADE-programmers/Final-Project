@@ -72,7 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AuthDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="EmmasDataSet.cs">
+      <DependentUpon>EmmasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmmasDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

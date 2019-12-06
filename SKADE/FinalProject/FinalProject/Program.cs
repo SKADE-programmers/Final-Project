@@ -18,6 +18,7 @@ namespace FinalProject
             Application.SetCompatibleTextRenderingDefault(false);
             //for testing:
             //Application.Run(new EmployeDetailForm());
+           //Application.Run(new Customer());
             Application.Run(new LoginPage());
 
         }

@@ -37,7 +37,9 @@ namespace FinalProject
             int selectedRowindex = dgv.SelectedCells[0].RowIndex;
             DataGridViewRow selectedrow = dgv.Rows[selectedRowindex];
             int id = Convert.ToInt32(selectedrow.Cells["Column1"].Value);
+            MessageBox.Show("", id.ToString());
             CustomerDetails customerdetails = new CustomerDetails(id);
+            customerdetails.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             customerdetails.Show();
             this.Hide();
         }

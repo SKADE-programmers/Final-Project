@@ -46,7 +46,6 @@
             this.custCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custPostal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditCustomer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
@@ -153,6 +152,8 @@
             // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoGenerateColumns = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -167,6 +168,7 @@
             this.dgv.DataSource = this.adminDS1;
             this.dgv.Location = new System.Drawing.Point(3, 181);
             this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.Size = new System.Drawing.Size(818, 271);
             this.dgv.TabIndex = 8;
@@ -196,6 +198,7 @@
             this.custPhone.HeaderText = "custPhone";
             this.custPhone.MinimumWidth = 6;
             this.custPhone.Name = "custPhone";
+            this.custPhone.ReadOnly = true;
             this.custPhone.Width = 125;
             // 
             // custAddress
@@ -204,6 +207,7 @@
             this.custAddress.HeaderText = "custAddress";
             this.custAddress.MinimumWidth = 6;
             this.custAddress.Name = "custAddress";
+            this.custAddress.ReadOnly = true;
             this.custAddress.Width = 125;
             // 
             // custCity
@@ -212,6 +216,7 @@
             this.custCity.HeaderText = "custCity";
             this.custCity.MinimumWidth = 6;
             this.custCity.Name = "custCity";
+            this.custCity.ReadOnly = true;
             this.custCity.Width = 125;
             // 
             // custPostal
@@ -220,6 +225,7 @@
             this.custPostal.HeaderText = "custPostal";
             this.custPostal.MinimumWidth = 6;
             this.custPostal.Name = "custPostal";
+            this.custPostal.ReadOnly = true;
             this.custPostal.Width = 125;
             // 
             // custEmail
@@ -228,18 +234,8 @@
             this.custEmail.HeaderText = "custEmail";
             this.custEmail.MinimumWidth = 6;
             this.custEmail.Name = "custEmail";
+            this.custEmail.ReadOnly = true;
             this.custEmail.Width = 125;
-            // 
-            // EditCustomer
-            // 
-            this.EditCustomer.Location = new System.Drawing.Point(614, 68);
-            this.EditCustomer.Margin = new System.Windows.Forms.Padding(2);
-            this.EditCustomer.Name = "EditCustomer";
-            this.EditCustomer.Size = new System.Drawing.Size(134, 23);
-            this.EditCustomer.TabIndex = 6;
-            this.EditCustomer.Text = "Edit Customer";
-            this.EditCustomer.UseVisualStyleBackColor = true;
-            this.EditCustomer.Click += new System.EventHandler(this.EditCustomer_Click);
             // 
             // Customer
             // 
@@ -247,7 +243,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 464);
             this.Controls.Add(this.CreateCustomer);
-            this.Controls.Add(this.EditCustomer);
             this.Controls.Add(this.CustomerDetails);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.list);
@@ -279,7 +274,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.Button EditCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn custPhone;

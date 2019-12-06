@@ -31,7 +31,6 @@
             this.lblFirstis = new System.Windows.Forms.Label();
             this.lblLastis = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lblFirst = new System.Windows.Forms.Label();
             this.lblLast = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@
             this.cBoxPos = new System.Windows.Forms.ComboBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,15 +88,6 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(635, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // label10
             // 
@@ -297,7 +286,6 @@
             this.btnCreate.Text = "Create New Employee";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
-
             // 
             // cBoxPos
             // 
@@ -355,7 +343,6 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblFirst);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEditLogin);
             this.Controls.Add(this.lblPassis);
             this.Controls.Add(this.btnEdit);
@@ -367,7 +354,6 @@
             this.Name = "EmployeDetailForm";
             this.Text = "EmployeDetail";
             this.Load += new System.EventHandler(this.EmployeDetailForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -379,7 +365,6 @@
         private System.Windows.Forms.Label lblFirstis;
         private System.Windows.Forms.Label lblLastis;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblFirst;
         private System.Windows.Forms.Label lblLast;
@@ -400,9 +385,9 @@
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnCreate;
-        private DataLibrary.AdminDS adminDS;
         private System.Windows.Forms.ComboBox cBoxPos;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button button1;
+        private DataLibrary.AdminDS adminDS;
     }
 }

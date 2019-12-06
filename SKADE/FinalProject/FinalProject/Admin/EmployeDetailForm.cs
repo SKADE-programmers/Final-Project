@@ -52,10 +52,12 @@ namespace FinalProject
             DialogResult dialogResult = MessageBox.Show("Delete?","Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning );
             if (dialogResult == DialogResult.Yes)
             {
-                EmployeeCreate_DeleteTableAdapter del = new EmployeeCreate_DeleteTableAdapter();
-                del.DeleteLogin(Convert.ToInt32(lblID.Text));
-                del.DeleteEmployee(Convert.ToInt32(txtID.Text));
+                Commands.DeleteEmployee(Convert.ToInt32(txtID.Text));
+                //EmployeeCreate_DeleteTableAdapter del = new EmployeeCreate_DeleteTableAdapter();
+               // del.DeleteLogin(Convert.ToInt32(lblID.Text));
+               // del.DeleteEmployee(Convert.ToInt32(txtID.Text));
                 visableControls();
+
                 EmployeeSimpleTableAdapter empLoad = new EmployeeSimpleTableAdapter();
                 empLoad.Fill(adminDS.EmployeeSimple);
 
@@ -135,13 +137,20 @@ namespace FinalProject
 
         private void button1_Click_Save(object sender, EventArgs e)
         {
-            EmployeeUpdateTableAdapter empUpd = new EmployeeUpdateTableAdapter();
-            empUpd.UpdateEmployee(txtFirst.Text, txtLast.Text, Convert.ToInt32(cBoxPos.SelectedValue), Convert.ToInt32(txtID.Text));
-
-            if (txtLogin.Text != "******")
+            //EmployeeUpdateTableAdapter empUpd = new EmployeeUpdateTableAdapter();
+            if (txtLogin.Text != "*****")
             {
-                empUpd.UpdateLogin(txtLogin.Text,txtPass.Text, Convert.ToInt32(txtID.Text));
+                log = txtLogin.Text;
+                pass = txtPass.Text;
             }
+                Commands.UpdateEmployee(txtFirst.Text, txtLast.Text, Convert.ToInt32(cBoxPos.SelectedValue), log, pass, Convert.ToInt32(txtID.Text));
+            ListBox1_SelectedIndexChanged( sender,  e);
+            //empUpd.UpdateEmployee(txtFirst.Text, txtLast.Text, Convert.ToInt32(cBoxPos.SelectedValue), Convert.ToInt32(txtID.Text));
+
+            // if (txtLogin.Text != "******")
+            // {
+            //   empUpd.UpdateLogin(txtLogin.Text,txtPass.Text, Convert.ToInt32(txtID.Text));
+            //}
             visableControls();
            
 
@@ -150,18 +159,20 @@ namespace FinalProject
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null)
-            {
-                EmployeeDetailsTableAdapter emp = new EmployeeDetailsTableAdapter();
-                emp.FillByID(adminDS.EmployeeDetails, Convert.ToInt32(listBox1.SelectedValue));
-                lblFirst.Text = adminDS.Tables[1].Rows[0].ItemArray[1].ToString();
-                lblLast.Text = adminDS.Tables[1].Rows[0].ItemArray[2].ToString();
-                lblID.Text = adminDS.Tables[1].Rows[0].ItemArray[0].ToString();
-                lblPos.Text = adminDS.Tables[1].Rows[0].ItemArray[4].ToString();
-                posID = int.Parse(adminDS.Tables[1].Rows[0].ItemArray[3].ToString());
-                lblLogin.Text = "******";
-                lblPass.Text = "******";
-                log = adminDS.Tables[1].Rows[0].ItemArray[5].ToString();
-                pass = adminDS.Tables[1].Rows[0].ItemArray[6].ToString();
+            {                
+                
+                EmployeeDetailsTableAdapter emp = new EmployeeDetailsTableAdapter();                
+                emp.FillByID(adminDS.EmployeeDetails, Convert.ToInt32(listBox1.SelectedValue));                
+                    lblID.Text = adminDS.Tables[1].Rows[0].ItemArray[0].ToString();
+                    lblFirst.Text = adminDS.Tables[1].Rows[0].ItemArray[1].ToString();
+                    lblLast.Text = adminDS.Tables[1].Rows[0].ItemArray[2].ToString();
+                    lblPos.Text = adminDS.Tables[1].Rows[0].ItemArray[4].ToString();
+                    posID = int.Parse(adminDS.Tables[1].Rows[0].ItemArray[3].ToString());
+                    lblLogin.Text = "*****";
+                    lblPass.Text = "*****";
+                    log = adminDS.Tables[1].Rows[0].ItemArray[5].ToString();
+                    pass = adminDS.Tables[1].Rows[0].ItemArray[6].ToString();                
+                
             }
         }
 

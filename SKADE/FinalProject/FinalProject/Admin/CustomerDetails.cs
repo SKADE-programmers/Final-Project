@@ -20,7 +20,7 @@ namespace FinalProject
         {
             InitializeComponent();            
             CustomerDetailsTableAdapter customer = new CustomerDetailsTableAdapter();   
-            customer.FillByID(adminDS2.CustomerDetails, id);
+            customer.Fill(adminDS2.CustomerDetails, id);
 
                 lblID.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[0].ToString();
                 lblFirst.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[1].ToString();
@@ -29,8 +29,7 @@ namespace FinalProject
                 lblAddressdes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[4].ToString();
                 label4city.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[5].ToString();
                 lblPostaldes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[6].ToString();
-                lblEmaildes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[7].ToString();
-                       
+                lblEmaildes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[7].ToString();                       
         }
 
         private void CustomerDetails_Load(object sender, EventArgs e)
@@ -56,6 +55,7 @@ namespace FinalProject
             if (txtFirst.Visible != true)
             {
                 //hides labels, shows textboxes
+                btnCreate.Visible = false;
                 btnDelete.Visible = true;
                 btnEdit.Text = "Cancel";
                 btnSave.Visible = true;
@@ -83,6 +83,7 @@ namespace FinalProject
             else
             {
                 //shows labels, hides textboxes
+                btnCreate.Visible = true;
                 btnDelete.Visible = false;
                 btnEdit.Text = "Edit";
                 btnSave.Visible = false;
@@ -115,21 +116,23 @@ namespace FinalProject
             DialogResult dialogResult = MessageBox.Show("Delete?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
-                CustomerCreate_DeleteTableAdapter del = new CustomerCreate_DeleteTableAdapter();
-                del.DeleteCustomer(Convert.ToInt32(lblID.Text));
+                Commands.DeleteCustomer(Convert.ToInt32(lblID.Text));
+                //CustomerCreate_DeleteTableAdapter del = new CustomerCreate_DeleteTableAdapter();
+                // del.DeleteCustomer(Convert.ToInt32(lblID.Text));
                 VisibleControls();
-                CustomerSimpleTableAdapter cus = new CustomerSimpleTableAdapter();
-                cus.Fill(adminDS2.CustomerSimple);
+                this.Close();
+                //CustomerSimpleTableAdapter cus = new CustomerSimpleTableAdapter();
+                //cus.Fill(adminDS2.CustomerSimple);
 
             }
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
-            CustomerUpdateTableAdapter update = new CustomerUpdateTableAdapter();
-            update.UpdateCustomer(txtFirst.Text, txtLast.Text, txtCity.Text, txtEmail.Text, txtPhone.Text, txtAddress.Text, txtPostal.Text, Convert.ToInt32((txtID.Text)));
-          
+            Commands.UpdateCustomer(txtFirst.Text, txtLast.Text, txtPhone.Text, txtAddress.Text, txtCity.Text, txtPostal.Text, txtEmail.Text, Convert.ToInt32((txtID.Text)));
+            // CustomerUpdateTableAdapter update = new CustomerUpdateTableAdapter();
+            // update.UpdateCustomer(txtFirst.Text, txtLast.Text, txtCity.Text, txtEmail.Text, txtPhone.Text, txtAddress.Text, txtPostal.Text, Convert.ToInt32((txtID.Text)));
+            this.Close();
 
         }
 
@@ -138,8 +141,6 @@ namespace FinalProject
             CustomerCreate customerCreate = new CustomerCreate();
             customerCreate.Show();
             customerCreate.FormClosing += new FormClosingEventHandler(ChildFormClosing);
-
-
             this.Hide();
         }
 
@@ -147,7 +148,7 @@ namespace FinalProject
         {
 
 
-            this.Show();
+            this.Close();
         }
 
         private void Button1_Click(object sender, EventArgs e)

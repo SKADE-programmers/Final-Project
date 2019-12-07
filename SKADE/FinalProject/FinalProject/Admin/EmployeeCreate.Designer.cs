@@ -202,6 +202,7 @@
             this.Name = "EmployeeCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "edit";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EmployeeCreate_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.adminPosDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS)).EndInit();

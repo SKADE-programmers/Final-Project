@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using DataLibrary;
 using DataLibrary.AdminDSTableAdapters;
 //Scott Stratton
-//Need redesign of text sizes/ button conformity/ button placement
 namespace FinalProject
 {
     public partial class EmployeDetailForm : Form
@@ -126,6 +125,7 @@ namespace FinalProject
             EmployeeCreate employeeCreate = new EmployeeCreate();
             employeeCreate.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             employeeCreate.Show();
+            
 
         }
 

@@ -37,7 +37,7 @@ namespace FinalProject
             int selectedRowindex = dgv.SelectedCells[0].RowIndex;
             DataGridViewRow selectedrow = dgv.Rows[selectedRowindex];
             int id = Convert.ToInt32(selectedrow.Cells["Column1"].Value);
-            MessageBox.Show("", id.ToString());
+            //MessageBox.Show("", id.ToString());
             CustomerDetails customerdetails = new CustomerDetails(id);
             customerdetails.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             customerdetails.Show();
@@ -70,7 +70,7 @@ namespace FinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            btnClear.Visible = true;
             Custom custom = new Custom();
             CustomerSimpleTableAdapter customerSimple = new CustomerSimpleTableAdapter();
             try
@@ -107,6 +107,13 @@ namespace FinalProject
         private void Dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            btnClear.Visible = false;
+            textBox1.Text = "";
+            DisplayCustomer();
         }
 
 

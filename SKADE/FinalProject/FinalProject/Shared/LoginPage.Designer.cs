@@ -55,7 +55,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(206, 20);
             this.txtUserName.TabIndex = 0;
-            this.txtUserName.TabStop = false;
             this.txtUserName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TxtUserName_MouseClick);
             // 
             // txtPassword
@@ -67,8 +66,7 @@
             this.txtPassword.Location = new System.Drawing.Point(186, 172);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(205, 20);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.TabStop = false;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TxtPassword_MouseClick);
             // 
             // btnlogin
@@ -81,7 +79,6 @@
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(98, 32);
             this.btnlogin.TabIndex = 3;
-            this.btnlogin.TabStop = false;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
@@ -190,6 +187,7 @@
             // 
             // LoginPage
             // 
+            this.AcceptButton = this.btnlogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;

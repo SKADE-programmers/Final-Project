@@ -23,10 +23,11 @@ namespace FinalProject
         private void AdminMain_Load(object sender, EventArgs e)
         {
             DateTime today = DateTime.Now;
-            lblDate.Text = today.ToString();
+            string datestring = today.ToShortDateString();
+            lblDate.Text = datestring;
             btnCreateNewEmployee.FlatAppearance.BorderSize = 0;
             btnDepartment.FlatAppearance.BorderSize = 0;
-            btnReports.FlatAppearance.BorderSize = 0;
+            btnSalesReports.FlatAppearance.BorderSize = 0;
         }
 
         private void AdminMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -42,6 +43,62 @@ namespace FinalProject
         private void adminLandingDeptmanagement1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCreateNewEmployee_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            EmployeDetailForm employeDetailForm = new EmployeDetailForm();
+            employeDetailForm.MdiParent = main;
+            employeDetailForm.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            this.Hide();
+            employeDetailForm.Show();
+        }
+
+        private void btnManageCustomers_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            Customer customer = new Customer();
+            customer.MdiParent = main;
+            customer.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            this.Hide();
+            customer.Show();
+        }
+
+        private void btnSalesReports_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            WeeklyReport weeklyReport = new WeeklyReport();
+            weeklyReport.MdiParent = main;
+            weeklyReport.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            this.Hide();
+            weeklyReport.Show();
+        }
+
+        private void btnWarrantyReport_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            WarrantyReports warranty = new WarrantyReports();
+            warranty.MdiParent = main;
+            warranty.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            this.Hide();
+            warranty.Show();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("WiP", "Not implemented yet");
+        }
+
+        private void btnRequests_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("WiP", "Not implemented yet");
+        }
+
+
+        private void ChildFormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
         }
     }
 }

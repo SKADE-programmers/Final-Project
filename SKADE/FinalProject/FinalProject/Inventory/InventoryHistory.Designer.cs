@@ -1,6 +1,6 @@
-﻿namespace FinalProject
+﻿namespace FinalProject.Inventory
 {
-    partial class InventoryOrder
+    partial class InventoryHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // InventoryOrder
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1434, 761);
-            this.Name = "InventoryOrder";
-            this.Text = "InventoryOrder";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "InventoryHistory";
         }
 
         #endregion

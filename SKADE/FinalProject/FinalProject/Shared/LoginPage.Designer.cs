@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnlogin = new System.Windows.Forms.Button();
@@ -40,44 +41,57 @@
             this.statusstripLogin = new System.Windows.Forms.StatusStrip();
             this.lblStatusstrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.authDS)).BeginInit();
             this.statusstripLogin.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUserName
             // 
             this.txtUserName.BackColor = System.Drawing.Color.White;
-            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.ForeColor = System.Drawing.Color.MediumBlue;
-            this.txtUserName.Location = new System.Drawing.Point(185, 88);
+            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserName.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtUserName.Location = new System.Drawing.Point(238, 88);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(206, 20);
+            this.txtUserName.Size = new System.Drawing.Size(206, 16);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TxtUserName_MouseClick);
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.MediumBlue;
-            this.txtPassword.Location = new System.Drawing.Point(186, 172);
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtPassword.Location = new System.Drawing.Point(239, 172);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(205, 20);
+            this.txtPassword.Size = new System.Drawing.Size(205, 16);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TxtPassword_MouseClick);
             // 
             // btnlogin
             // 
-            this.btnlogin.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnlogin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogin.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(241, 211);
+            this.btnlogin.Location = new System.Drawing.Point(312, 227);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(98, 32);
+            this.btnlogin.Size = new System.Drawing.Size(77, 35);
             this.btnlogin.TabIndex = 3;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -88,37 +102,38 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.BackColor = System.Drawing.Color.White;
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblUserName.Location = new System.Drawing.Point(145, 68);
+            this.lblUserName.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserName.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblUserName.Location = new System.Drawing.Point(181, 53);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(70, 15);
+            this.lblUserName.Size = new System.Drawing.Size(88, 19);
             this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "UserName:";
+            this.lblUserName.Text = "Username:";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.BackColor = System.Drawing.Color.White;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPassword.Location = new System.Drawing.Point(145, 152);
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassword.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblPassword.Location = new System.Drawing.Point(185, 138);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(64, 15);
+            this.lblPassword.Size = new System.Drawing.Size(85, 19);
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Password:";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.DisabledLinkColor = System.Drawing.Color.LightSlateGray;
-            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Dubai", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.linkLabel1.LinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(240, 261);
+            this.linkLabel1.LinkColor = System.Drawing.Color.CornflowerBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(308, 275);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(101, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(92, 21);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot Password";
@@ -129,22 +144,24 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.BackColor = System.Drawing.Color.DimGray;
+            this.lblDate.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblDate.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDate.Location = new System.Drawing.Point(422, 340);
+            this.lblDate.Location = new System.Drawing.Point(3, 311);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.Size = new System.Drawing.Size(27, 16);
             this.lblDate.TabIndex = 11;
             this.lblDate.Text = "Date";
             // 
             // lblShowPassword
             // 
             this.lblShowPassword.AutoSize = true;
-            this.lblShowPassword.BackColor = System.Drawing.Color.White;
-            this.lblShowPassword.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblShowPassword.Location = new System.Drawing.Point(402, 178);
+            this.lblShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblShowPassword.Font = new System.Drawing.Font("Dubai Light", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowPassword.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblShowPassword.Location = new System.Drawing.Point(476, 164);
             this.lblShowPassword.Name = "lblShowPassword";
-            this.lblShowPassword.Size = new System.Drawing.Size(34, 13);
+            this.lblShowPassword.Size = new System.Drawing.Size(37, 21);
             this.lblShowPassword.TabIndex = 11;
             this.lblShowPassword.Text = "Show";
             // 
@@ -155,7 +172,7 @@
             // 
             // statusstripLogin
             // 
-            this.statusstripLogin.BackColor = System.Drawing.Color.DimGray;
+            this.statusstripLogin.BackColor = System.Drawing.Color.SteelBlue;
             this.statusstripLogin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatusstrip,
             this.StatusLabel});
@@ -177,23 +194,148 @@
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Location = new System.Drawing.Point(238, 107);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(226, 1);
+            this.panel1.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Location = new System.Drawing.Point(239, 191);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(226, 1);
+            this.panel2.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblDate);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(146, 336);
+            this.panel3.TabIndex = 16;
+            this.panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label7.Location = new System.Drawing.Point(77, 266);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 84);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label6.Location = new System.Drawing.Point(-72, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 84);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label5.Location = new System.Drawing.Point(118, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 84);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label4.Location = new System.Drawing.Point(-31, 191);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 84);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label3.Location = new System.Drawing.Point(77, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 84);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(24, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Login Form";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 84);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.DimGray;
+            this.panelTop.BackColor = System.Drawing.Color.SteelBlue;
             this.panelTop.Location = new System.Drawing.Point(0, -13);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(623, 23);
             this.panelTop.TabIndex = 13;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // LoginPage
             // 
             this.AcceptButton = this.btnlogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(623, 358);
             this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblShowPassword);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lblPassword);
@@ -212,6 +354,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.authDS)).EndInit();
             this.statusstripLogin.ResumeLayout(false);
             this.statusstripLogin.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +374,18 @@
         private System.Windows.Forms.Label lblShowPassword;
         private System.Windows.Forms.StatusStrip statusstripLogin;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusstrip;
-        private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

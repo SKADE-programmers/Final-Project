@@ -31,7 +31,7 @@ namespace FinalProject.Sales
              customerSimpleTableAdapter cust = new customerSimpleTableAdapter();
             if (!string.IsNullOrWhiteSpace(txtCustname.Text))
             {
-               // CustomerSimpleTableAdapter cust = new CustomerSimpleTableAdapter();
+                //customerSimpleTableAdapter cust = new customerSimpleTableAdapter();
                 cust.Fill(salesDS1.customerSimple, txtCustname.Text);
             }
             else if (txtCustNumber.Text != "")
@@ -79,17 +79,40 @@ namespace FinalProject.Sales
         {
             Selectedservices.Add(services[listBox2.SelectedIndex]);
             services.Remove(services[listBox2.SelectedIndex]);
+            listBox2.Refresh();
             listBox2.DataSource = services;
             listBox2.DisplayMember = "Name";
             listBox2.ValueMember = "ID";
             listBox3.DataSource = Selectedservices;
             listBox3.DisplayMember = "Name";
             listBox3.ValueMember = "ID";
+            
+            
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void radBPurchase_CheckedChanged(object sender, EventArgs e)
+        {
+            cBoxCustEquip.Visible = false;
+        }
+
+        private void radBService_CheckedChanged(object sender, EventArgs e)
+        {
+            cBoxCustEquip.Visible = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

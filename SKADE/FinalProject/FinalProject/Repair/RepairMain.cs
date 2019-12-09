@@ -16,5 +16,41 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            RepairRequests requests = new RepairRequests();
+            requests.MdiParent = main;
+            panel2.Controls.Add(requests);
+            requests.Show();
+        }
+
+        private void btnUpdateRequests_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            RepairRequestDetails  requestDetails= new RepairRequestDetails();
+            requestDetails.MdiParent = main;
+            panel2.Controls.Add(requestDetails);
+            requestDetails.Show();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            SearchInventory inventory = new SearchInventory();
+            inventory.MdiParent = main;
+            panel2.Controls.Add(inventory);
+            inventory.Show();
+        }
+
+        private void btnRepairHistory_Click(object sender, EventArgs e)
+        {
+            Form main = this.MdiParent;
+            SearchRepairRecord repairRecord = new SearchRepairRecord();
+            repairRecord.MdiParent = main;
+            panel2.Controls.Add(repairRecord);
+            repairRecord.Show();
+        }
     }
 }

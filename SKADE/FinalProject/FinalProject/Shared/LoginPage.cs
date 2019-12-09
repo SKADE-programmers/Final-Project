@@ -15,9 +15,13 @@ namespace FinalProject
 {
     public partial class LoginPage : Form
     {
+        int panelwidth;
+        bool hidden;
         public LoginPage()
         {
             InitializeComponent();
+            panelwidth = panel3.Width;
+            hidden = true;
         }
 
         int attempts = 1;
@@ -123,6 +127,7 @@ namespace FinalProject
                     {//Manager
                         AdminMain adminMain = new AdminMain();
                         adminMain.MdiParent = main;
+                        main.MainMenuStrip.Items[3].Visible = true;
                         adminMain.Show();
                     }
                     else if (pos == 5)
@@ -183,5 +188,39 @@ namespace FinalProject
             attempts = 1;
             this.Show();
         }
+
+        //private void panel3_MouseHover(object sender, EventArgs e)
+        //{
+        //    timer1.Start();
+        //}
+        private void panel3_MouseClick(object sender, MouseEventArgs e)
+        {
+            timer1.Start();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (hidden)
+            {
+                panel3.Width = panel3.Width + 29;
+                if (panel3.Width >= panelwidth)
+                {
+                    timer1.Stop();
+                    hidden = false;
+                    this.Refresh();
+                }
+            }
+            else
+            {
+                panel3.Width = panel3.Width - 29;
+                if (panel3.Width <= panelwidth)
+                {
+                    timer1.Stop();
+                    hidden = true;
+                    this.Refresh();
+                }
+            }
+        }
+
+       
     }
 }

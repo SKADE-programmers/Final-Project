@@ -173,6 +173,68 @@ C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\FinalProject\FinalProject
 C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.pdb
 C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll.config
 C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.csprojAssemblyReference.cache
-C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll
-C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.dll
 C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.pdb
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.csprojAssemblyReference.cache
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.AdminMain.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Customer.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.CustomerCreate.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.CustomerDetails.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.EmployeeCreate.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.WarrantyReports.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.EmployeDetailForm.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.forgotPassword.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.LoginPage.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Main.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Properties.Resources.resources
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.dll
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.pdb
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.pdb
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll.config
+C:\Users\Shay\Desktop\Kaam 25 Hai\Bhot ich zyaada kaam\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.dll
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.pdb
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.pdb
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll.config
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.csprojAssemblyReference.cache
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.AdminMain.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Customer.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.CustomerCreate.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.CustomerDetails.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.EmployeeCreate.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.WarrantyReports.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.EmployeDetailForm.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.forgotPassword.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.LoginPage.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Main.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Properties.Resources.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.WeeklyReport.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.InventoryCount.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.InventoryMain.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.InventoryOrder.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.InventoryRequestDetails.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.InventoryRequests.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.RepairMain.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.RepairRecordDetails.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.RepairRequestDetails.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.RepairRequests.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.SearchRepairRecord.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Sales.Sale.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.SalesMain.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.SearchSalesRecord.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.SearchInventory.resources
+C:\Users\Scott\Desktop\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Sales.CustomerHistory.resources

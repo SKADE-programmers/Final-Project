@@ -54,30 +54,30 @@
             // CustomerSearch
             // 
             this.CustomerSearch.AutoSize = true;
-            this.CustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.CustomerSearch.Location = new System.Drawing.Point(64, 39);
+            this.CustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.CustomerSearch.Location = new System.Drawing.Point(6, 11);
             this.CustomerSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CustomerSearch.Name = "CustomerSearch";
-            this.CustomerSearch.Size = new System.Drawing.Size(266, 33);
+            this.CustomerSearch.Size = new System.Drawing.Size(221, 29);
             this.CustomerSearch.TabIndex = 0;
             this.CustomerSearch.Text = "Customer Search:";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(70, 76);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(11, 48);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 40);
+            this.textBox1.Size = new System.Drawing.Size(215, 35);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(418, 39);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(231, 21);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 77);
+            this.button1.Size = new System.Drawing.Size(148, 61);
             this.button1.TabIndex = 2;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -86,22 +86,22 @@
             // list
             // 
             this.list.AutoSize = true;
-            this.list.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.list.Location = new System.Drawing.Point(624, 39);
+            this.list.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.list.Location = new System.Drawing.Point(534, 9);
             this.list.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(269, 33);
+            this.list.Size = new System.Drawing.Size(222, 29);
             this.list.TabIndex = 3;
             this.list.Text = "List of Customers:";
             this.list.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CreateCustomer
             // 
-            this.CreateCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.CreateCustomer.Location = new System.Drawing.Point(1236, 145);
+            this.CreateCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.CreateCustomer.Location = new System.Drawing.Point(965, 22);
             this.CreateCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CreateCustomer.Name = "CreateCustomer";
-            this.CreateCustomer.Size = new System.Drawing.Size(185, 77);
+            this.CreateCustomer.Size = new System.Drawing.Size(148, 61);
             this.CreateCustomer.TabIndex = 7;
             this.CreateCustomer.Text = "Create Customer";
             this.CreateCustomer.UseVisualStyleBackColor = true;
@@ -109,11 +109,11 @@
             // 
             // CustomerDetails
             // 
-            this.CustomerDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.CustomerDetails.Location = new System.Drawing.Point(1236, 39);
+            this.CustomerDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.CustomerDetails.Location = new System.Drawing.Point(813, 22);
             this.CustomerDetails.Margin = new System.Windows.Forms.Padding(2);
             this.CustomerDetails.Name = "CustomerDetails";
-            this.CustomerDetails.Size = new System.Drawing.Size(185, 77);
+            this.CustomerDetails.Size = new System.Drawing.Size(148, 61);
             this.CustomerDetails.TabIndex = 5;
             this.CustomerDetails.Text = "Customer Details";
             this.CustomerDetails.UseVisualStyleBackColor = true;
@@ -123,12 +123,12 @@
             // 
             this.comboBox1.DataSource = this.adminDS1;
             this.comboBox1.DisplayMember = "customer.Customer Name";
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(934, 39);
+            this.comboBox1.Location = new System.Drawing.Point(539, 45);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 41);
+            this.comboBox1.Size = new System.Drawing.Size(258, 37);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "customer.id";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
@@ -175,24 +175,24 @@
             this.custEmail});
             this.dgv.DataMember = "CustomerSimple";
             this.dgv.DataSource = this.adminDS1;
-            this.dgv.Location = new System.Drawing.Point(14, 263);
+            this.dgv.Location = new System.Drawing.Point(14, 128);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
-            this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv.Size = new System.Drawing.Size(1418, 516);
+            this.dgv.Size = new System.Drawing.Size(1135, 651);
             this.dgv.TabIndex = 8;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_CellContentClick);
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.btnClear.Location = new System.Drawing.Point(418, 145);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.btnClear.Location = new System.Drawing.Point(382, 21);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(185, 77);
+            this.btnClear.Size = new System.Drawing.Size(148, 61);
             this.btnClear.TabIndex = 2;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -202,70 +202,77 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "id";
+            this.Column1.FillWeight = 61.83746F;
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Customer Name";
+            this.dataGridViewTextBoxColumn1.FillWeight = 137.778F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Customer Name";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 225;
+            this.dataGridViewTextBoxColumn1.Width = 180;
             // 
             // custPhone
             // 
             this.custPhone.DataPropertyName = "custPhone";
+            this.custPhone.FillWeight = 91.66967F;
             this.custPhone.HeaderText = "custPhone";
             this.custPhone.MinimumWidth = 6;
             this.custPhone.Name = "custPhone";
             this.custPhone.ReadOnly = true;
-            this.custPhone.Width = 170;
+            this.custPhone.Width = 148;
             // 
             // custAddress
             // 
             this.custAddress.DataPropertyName = "custAddress";
+            this.custAddress.FillWeight = 126.713F;
             this.custAddress.HeaderText = "custAddress";
             this.custAddress.MinimumWidth = 6;
             this.custAddress.Name = "custAddress";
             this.custAddress.ReadOnly = true;
-            this.custAddress.Width = 250;
+            this.custAddress.Width = 200;
             // 
             // custCity
             // 
             this.custCity.DataPropertyName = "custCity";
+            this.custCity.FillWeight = 90.03324F;
             this.custCity.HeaderText = "custCity";
             this.custCity.MinimumWidth = 6;
             this.custCity.Name = "custCity";
             this.custCity.ReadOnly = true;
-            this.custCity.Width = 203;
+            this.custCity.Width = 165;
             // 
             // custPostal
             // 
             this.custPostal.DataPropertyName = "custPostal";
+            this.custPostal.FillWeight = 61.88665F;
             this.custPostal.HeaderText = "custPostal";
             this.custPostal.MinimumWidth = 6;
             this.custPostal.Name = "custPostal";
             this.custPostal.ReadOnly = true;
-            this.custPostal.Width = 150;
             // 
             // custEmail
             // 
             this.custEmail.DataPropertyName = "custEmail";
+            this.custEmail.FillWeight = 130.082F;
             this.custEmail.HeaderText = "custEmail";
             this.custEmail.MinimumWidth = 6;
             this.custEmail.Name = "custEmail";
             this.custEmail.ReadOnly = true;
-            this.custEmail.Width = 320;
+            this.custEmail.Width = 280;
             // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1450, 800);
+            this.ClientSize = new System.Drawing.Size(1161, 719);
             this.Controls.Add(this.CreateCustomer);
             this.Controls.Add(this.CustomerDetails);
             this.Controls.Add(this.comboBox1);

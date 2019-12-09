@@ -165,5 +165,10 @@ namespace FinalProject
         {
 
         }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -50,8 +50,9 @@ namespace FinalProject
             Form main = this.MdiParent;
             EmployeDetailForm employeDetailForm = new EmployeDetailForm();
             employeDetailForm.MdiParent = main;
-            employeDetailForm.FormClosing += new FormClosingEventHandler(ChildFormClosing);
-            this.Hide();
+            //employeDetailForm.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            //this.Hide();
+            panel2.Controls.Add(employeDetailForm);
             employeDetailForm.Show();
         }
 
@@ -60,8 +61,9 @@ namespace FinalProject
             Form main = this.MdiParent;
             Customer customer = new Customer();
             customer.MdiParent = main;
-            customer.FormClosing += new FormClosingEventHandler(ChildFormClosing);
-            this.Hide();
+            //customer.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            //this.Hide();
+            panel2.Controls.Add(customer);
             customer.Show();
         }
 
@@ -70,8 +72,9 @@ namespace FinalProject
             Form main = this.MdiParent;
             WeeklyReport weeklyReport = new WeeklyReport();
             weeklyReport.MdiParent = main;
-            weeklyReport.FormClosing += new FormClosingEventHandler(ChildFormClosing);
-            this.Hide();
+            //weeklyReport.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            //this.Hide();
+            panel2.Controls.Add(weeklyReport);
             weeklyReport.Show();
         }
 
@@ -80,8 +83,9 @@ namespace FinalProject
             Form main = this.MdiParent;
             WarrantyReports warranty = new WarrantyReports();
             warranty.MdiParent = main;
-            warranty.FormClosing += new FormClosingEventHandler(ChildFormClosing);
-            this.Hide();
+            //warranty.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            //this.Hide();
+            panel2.Controls.Add(warranty);
             warranty.Show();
         }
 

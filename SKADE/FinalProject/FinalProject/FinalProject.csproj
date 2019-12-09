@@ -50,11 +50,11 @@
   <ItemGroup>
     <Reference Include="ClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.dll</HintPath>
+      <HintPath>..\..\..\Main\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\ClassLibrary.dll</HintPath>
     </Reference>
     <Reference Include="DataLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DataLibrary\DataLibrary\bin\Debug\DataLibrary.dll</HintPath>
+      <HintPath>..\..\..\Main\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -111,10 +111,22 @@
     <Compile Include="Admin\EmployeeCreate.Designer.cs">
       <DependentUpon>EmployeeCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\InventoryHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryHistory.Designer.cs">
+      <DependentUpon>InventoryHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\CustomerHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\CustomerHistory.Designer.cs">
+      <DependentUpon>CustomerHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\Sale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\Sale.Designer.cs">
+    <Compile Include="Sales\Sale.designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\SalesMain.cs">
@@ -242,8 +254,50 @@
     <EmbeddedResource Include="Admin\EmployeDetailForm.resx">
       <DependentUpon>EmployeDetailForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\WeeklyReport.resx">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryCount.resx">
+      <DependentUpon>InventoryCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryMain.resx">
+      <DependentUpon>InventoryMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryOrder.resx">
+      <DependentUpon>InventoryOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryRequestDetails.resx">
+      <DependentUpon>InventoryRequestDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryRequests.resx">
+      <DependentUpon>InventoryRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repair\RepairMain.resx">
+      <DependentUpon>RepairMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repair\RepairRecordDetails.resx">
+      <DependentUpon>RepairRecordDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repair\RepairRequestDetails.resx">
+      <DependentUpon>RepairRequestDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repair\RepairRequests.resx">
+      <DependentUpon>RepairRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repair\SearchRepairRecord.resx">
+      <DependentUpon>SearchRepairRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\CustomerHistory.resx">
+      <DependentUpon>CustomerHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\Sale.resx">
       <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesMain.resx">
+      <DependentUpon>SalesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SearchSalesRecord.resx">
+      <DependentUpon>SearchSalesRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shared\forgotPassword2.resx">
       <DependentUpon>forgotPassword2.cs</DependentUpon>
@@ -263,6 +317,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Shared\SearchInventory.resx">
+      <DependentUpon>SearchInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

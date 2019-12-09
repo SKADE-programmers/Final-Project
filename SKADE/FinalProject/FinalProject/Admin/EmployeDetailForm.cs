@@ -123,8 +123,12 @@ namespace FinalProject
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             EmployeeCreate employeeCreate = new EmployeeCreate();
+            Form parent = this.ParentForm;
+            employeeCreate.TopLevel = false;
+            parent.Controls["panel2"].Controls.Add(employeeCreate);
             employeeCreate.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             employeeCreate.Show();
+            this.Hide();
             
 
         }

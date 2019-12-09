@@ -185,6 +185,11 @@ namespace FinalProject
             //tslNumberOfSearchResults = null;
         }
 
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //private void DtpWarrantyStartDate_ValueChanged(object sender, EventArgs e)
         //{
         //    SqlConnection sqltb = new SqlConnection("Data Source = (LocalDB)/MSSQLLocalDB; AttachDbFilename = " + "C:/Users/Administrator/OneDrive - NC/Final-Project-ShadowsHuntUs-patch-2/SKADE/FinalProject/FinalProject/Emmas.mdf" + "; Integrated Security = True");
@@ -212,7 +217,7 @@ namespace FinalProject
         //    }
         //}
 
-      
+
     }
 
 }

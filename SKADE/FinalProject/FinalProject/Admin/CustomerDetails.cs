@@ -139,6 +139,9 @@ namespace FinalProject
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             CustomerCreate customerCreate = new CustomerCreate();
+            Form parent = this.ParentForm;
+            customerCreate.TopLevel = false;
+            parent.Controls["panel2"].Controls.Add(customerCreate);
             customerCreate.Show();
             customerCreate.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             this.Hide();

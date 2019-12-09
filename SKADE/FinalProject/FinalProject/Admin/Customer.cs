@@ -37,8 +37,10 @@ namespace FinalProject
             int selectedRowindex = dgv.SelectedCells[0].RowIndex;
             DataGridViewRow selectedrow = dgv.Rows[selectedRowindex];
             int id = Convert.ToInt32(selectedrow.Cells["Column1"].Value);
-            //MessageBox.Show("", id.ToString());
+            Form parent = this.ParentForm;
             CustomerDetails customerdetails = new CustomerDetails(id);
+            customerdetails.TopLevel = false;
+            parent.Controls["panel2"].Controls.Add(customerdetails);
             customerdetails.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             customerdetails.Show();
             this.Hide();
@@ -52,7 +54,9 @@ namespace FinalProject
         private void CreateCustomer_Click(object sender, EventArgs e)
         {
             CustomerCreate customerCreate = new CustomerCreate();
-
+            Form parent = this.ParentForm;
+            customerCreate.TopLevel = false;
+            parent.Controls["panel2"].Controls.Add(customerCreate);
             customerCreate.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             customerCreate.Show();
             this.Hide();

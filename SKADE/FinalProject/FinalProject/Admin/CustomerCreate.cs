@@ -23,12 +23,7 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        private void CustomerCreate_Load(object sender, EventArgs e)
-        {
 
-
-
-        }
 
         private void Create_Click(object sender, EventArgs e)
         {
@@ -65,49 +60,11 @@ namespace FinalProject
             
         }
 
-        private void CustomerName_Click(object sender, EventArgs e)
+
+
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void LastName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CustomerPhone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Address_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void City_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PostalCode_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Email_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.Close();
         }
     }
     }

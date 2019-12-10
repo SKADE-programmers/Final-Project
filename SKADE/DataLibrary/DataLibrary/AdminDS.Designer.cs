@@ -11395,7 +11395,7 @@ SELECT id, custFirst, custLast, custPhone, custAddress, custCity, custPostal, cu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        receipt.ordNumber, receipt.ordDate, receipt.paymentID, receipt.custID, receipt.empID, customer.custFirst + ' ' + customer.custLast AS 'Customer', employee.empFirst + ' ' + employee.empLast AS 'Employee', 
@@ -11408,6 +11408,16 @@ WHERE        (receipt.ordDate > @param1) AND (receipt.ordDate < @param2)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param1", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "ordDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param2", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "ordDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        receipt.ordNumber, receipt.ordDate, receipt.paymentID, receipt.custID, receipt.empID, customer.custFirst + ' ' + customer.custLast AS 'Customer', employee.empFirst + ' ' + employee.empLast AS 'Employee', 
+                         payment.payType AS 'Payment Type', receipt.ordPaid
+FROM            receipt INNER JOIN
+                         customer ON receipt.custID = customer.id INNER JOIN
+                         employee ON receipt.empID = employee.id INNER JOIN
+                         payment ON receipt.paymentID = payment.id
+";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11453,6 +11463,30 @@ WHERE        (receipt.ordDate > @param1) AND (receipt.ordDate < @param2)";
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(param2));
             }
+            AdminDS.WeeklySalesReportDataTable dataTable = new AdminDS.WeeklySalesReportDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(AdminDS.WeeklySalesReportDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual AdminDS.WeeklySalesReportDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             AdminDS.WeeklySalesReportDataTable dataTable = new AdminDS.WeeklySalesReportDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

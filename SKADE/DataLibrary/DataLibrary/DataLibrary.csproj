@@ -82,6 +82,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmmasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InventoryDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +97,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SalesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesDS.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +139,17 @@
     <None Include="EmmasDataSet.xss">
       <DependentUpon>EmmasDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Inventory.xsc">
+      <DependentUpon>Inventory.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory.xss">
+      <DependentUpon>Inventory.xsd</DependentUpon>
+    </None>
     <None Include="InventoryDS.xsc">
       <DependentUpon>InventoryDS.xsd</DependentUpon>
     </None>
@@ -143,6 +164,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SalesDS.xsc">
+      <DependentUpon>SalesDS.xsd</DependentUpon>
+    </None>
+    <None Include="SalesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalesDS.xss">
+      <DependentUpon>SalesDS.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

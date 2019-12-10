@@ -19,7 +19,6 @@ C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrar
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrary\bin\Debug\DataLibrary.dll.config
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrary\bin\Debug\DataLibrary.dll
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrary\bin\Debug\DataLibrary.pdb
-C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrary\obj\Debug\DataLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrary\obj\Debug\DataLibrary.dll
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrary\obj\Debug\DataLibrary.pdb
 C:\Users\Scott\Desktop\F\Final-Project-master\SKADE\DataLibrary\DataLibrary\bin\Debug\Emmas.mdf
@@ -37,3 +36,4 @@ C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\DataLibrary\DataLibrary\b
 C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\DataLibrary\DataLibrary\obj\Debug\DataLibrary.dll
 C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\DataLibrary\DataLibrary\obj\Debug\DataLibrary.pdb
 C:\Users\Scott\Desktop\Main\Final-Project-master\SKADE\DataLibrary\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Final-Project-master\SKADE\DataLibrary\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache

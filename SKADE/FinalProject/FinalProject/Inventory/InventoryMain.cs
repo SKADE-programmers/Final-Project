@@ -29,7 +29,7 @@ namespace FinalProject
         private void btnOrderHistory_Click(object sender, EventArgs e)
         {
             Form main = this.MdiParent;
-            Inventory.InventoryHistory history = new Inventory.InventoryHistory();
+            Inventory.OrderHistory history = new Inventory.OrderHistory();
             history.MdiParent = main;
             panel2.Controls.Add(history);
             history.Show();

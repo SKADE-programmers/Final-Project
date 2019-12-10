@@ -57,6 +57,23 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnWarrantySearch = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.receiptIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equSerialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceorderBindingSource1)).BeginInit();
@@ -92,6 +109,25 @@
             this.dgvSearchResults.AllowUserToDeleteRows = false;
             this.dgvSearchResults.AutoGenerateColumns = false;
             this.dgvSearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearchResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewCheckBoxColumn1,
+            this.receiptIDDataGridViewTextBoxColumn,
+            this.serviceIDDataGridViewTextBoxColumn,
+            this.equipIDDataGridViewTextBoxColumn,
+            this.ordNumberDataGridViewTextBoxColumn,
+            this.serNameDataGridViewTextBoxColumn,
+            this.serPriceDataGridViewTextBoxColumn,
+            this.ordDateDataGridViewTextBoxColumn,
+            this.serDescriptionDataGridViewTextBoxColumn,
+            this.equModelDataGridViewTextBoxColumn,
+            this.equSerialDataGridViewTextBoxColumn,
+            this.manNameDataGridViewTextBoxColumn,
+            this.customerDataGridViewTextBoxColumn});
+            this.dgvSearchResults.DataMember = "WarrantyReport";
             this.dgvSearchResults.DataSource = this.adminDS1;
             this.dgvSearchResults.Location = new System.Drawing.Point(274, 3);
             this.dgvSearchResults.Name = "dgvSearchResults";
@@ -367,6 +403,125 @@
             this.btnWarrantySearch.UseVisualStyleBackColor = false;
             this.btnWarrantySearch.Click += new System.EventHandler(this.BtnWarrantySearch_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "serordDateIn";
+            this.dataGridViewTextBoxColumn2.HeaderText = "serordDateIn";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "serordDateOut";
+            this.dataGridViewTextBoxColumn3.HeaderText = "serordDateOut";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "serordIssue";
+            this.dataGridViewTextBoxColumn4.HeaderText = "serordIssue";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "serordWarranty";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "serordWarranty";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // receiptIDDataGridViewTextBoxColumn
+            // 
+            this.receiptIDDataGridViewTextBoxColumn.DataPropertyName = "receiptID";
+            this.receiptIDDataGridViewTextBoxColumn.HeaderText = "receiptID";
+            this.receiptIDDataGridViewTextBoxColumn.Name = "receiptIDDataGridViewTextBoxColumn";
+            this.receiptIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serviceIDDataGridViewTextBoxColumn
+            // 
+            this.serviceIDDataGridViewTextBoxColumn.DataPropertyName = "serviceID";
+            this.serviceIDDataGridViewTextBoxColumn.HeaderText = "serviceID";
+            this.serviceIDDataGridViewTextBoxColumn.Name = "serviceIDDataGridViewTextBoxColumn";
+            this.serviceIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // equipIDDataGridViewTextBoxColumn
+            // 
+            this.equipIDDataGridViewTextBoxColumn.DataPropertyName = "equipID";
+            this.equipIDDataGridViewTextBoxColumn.HeaderText = "equipID";
+            this.equipIDDataGridViewTextBoxColumn.Name = "equipIDDataGridViewTextBoxColumn";
+            this.equipIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ordNumberDataGridViewTextBoxColumn
+            // 
+            this.ordNumberDataGridViewTextBoxColumn.DataPropertyName = "ordNumber";
+            this.ordNumberDataGridViewTextBoxColumn.HeaderText = "ordNumber";
+            this.ordNumberDataGridViewTextBoxColumn.Name = "ordNumberDataGridViewTextBoxColumn";
+            this.ordNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serNameDataGridViewTextBoxColumn
+            // 
+            this.serNameDataGridViewTextBoxColumn.DataPropertyName = "serName";
+            this.serNameDataGridViewTextBoxColumn.HeaderText = "serName";
+            this.serNameDataGridViewTextBoxColumn.Name = "serNameDataGridViewTextBoxColumn";
+            this.serNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serPriceDataGridViewTextBoxColumn
+            // 
+            this.serPriceDataGridViewTextBoxColumn.DataPropertyName = "serPrice";
+            this.serPriceDataGridViewTextBoxColumn.HeaderText = "serPrice";
+            this.serPriceDataGridViewTextBoxColumn.Name = "serPriceDataGridViewTextBoxColumn";
+            this.serPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ordDateDataGridViewTextBoxColumn
+            // 
+            this.ordDateDataGridViewTextBoxColumn.DataPropertyName = "ordDate";
+            this.ordDateDataGridViewTextBoxColumn.HeaderText = "ordDate";
+            this.ordDateDataGridViewTextBoxColumn.Name = "ordDateDataGridViewTextBoxColumn";
+            this.ordDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serDescriptionDataGridViewTextBoxColumn
+            // 
+            this.serDescriptionDataGridViewTextBoxColumn.DataPropertyName = "serDescription";
+            this.serDescriptionDataGridViewTextBoxColumn.HeaderText = "serDescription";
+            this.serDescriptionDataGridViewTextBoxColumn.Name = "serDescriptionDataGridViewTextBoxColumn";
+            this.serDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // equModelDataGridViewTextBoxColumn
+            // 
+            this.equModelDataGridViewTextBoxColumn.DataPropertyName = "equModel";
+            this.equModelDataGridViewTextBoxColumn.HeaderText = "equModel";
+            this.equModelDataGridViewTextBoxColumn.Name = "equModelDataGridViewTextBoxColumn";
+            this.equModelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // equSerialDataGridViewTextBoxColumn
+            // 
+            this.equSerialDataGridViewTextBoxColumn.DataPropertyName = "equSerial";
+            this.equSerialDataGridViewTextBoxColumn.HeaderText = "equSerial";
+            this.equSerialDataGridViewTextBoxColumn.Name = "equSerialDataGridViewTextBoxColumn";
+            this.equSerialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // manNameDataGridViewTextBoxColumn
+            // 
+            this.manNameDataGridViewTextBoxColumn.DataPropertyName = "manName";
+            this.manNameDataGridViewTextBoxColumn.HeaderText = "manName";
+            this.manNameDataGridViewTextBoxColumn.Name = "manNameDataGridViewTextBoxColumn";
+            this.manNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerDataGridViewTextBoxColumn
+            // 
+            this.customerDataGridViewTextBoxColumn.DataPropertyName = "Customer";
+            this.customerDataGridViewTextBoxColumn.HeaderText = "Customer";
+            this.customerDataGridViewTextBoxColumn.Name = "customerDataGridViewTextBoxColumn";
+            this.customerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // WarrantyReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,5 +583,22 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receiptIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equipIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ordNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ordDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equModelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equSerialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
     }
 }

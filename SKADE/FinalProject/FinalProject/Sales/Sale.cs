@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary;
 using DataLibrary;
-using DataLibrary.SalesDSTableAdapters;
+//using DataLibrary.;
 
 namespace FinalProject.Sales
 {
@@ -28,7 +28,7 @@ namespace FinalProject.Sales
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-             customerSimpleTableAdapter cust = new customerSimpleTableAdapter();
+          //   customerSimpleTableAdapter cust = new customerSimpleTableAdapter();
             if (!string.IsNullOrWhiteSpace(txtCustname.Text))
             {
                 //customerSimpleTableAdapter cust = new customerSimpleTableAdapter();

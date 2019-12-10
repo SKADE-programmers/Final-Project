@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using DataLibrary.EmmasDataSetTableAdapters;
+using DataLibrary;
 
 namespace FinalProject.Sales
 {
@@ -15,6 +18,18 @@ namespace FinalProject.Sales
         public CustomerHistory()
         {
             InitializeComponent();
+        }
+
+        private void CustomerHistory_Load(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            customerTableAdapter custTabda = new customerTableAdapter();
+
+            custTabda.Fill(emmasDataSet1.customer);
         }
     }
 }

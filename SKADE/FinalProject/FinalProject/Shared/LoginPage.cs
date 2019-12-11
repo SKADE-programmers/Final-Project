@@ -56,9 +56,11 @@ namespace FinalProject
             txtUserName.Text = "Username";
             txtPassword.Text = "Password";
             btnlogin.FlatAppearance.BorderSize = 0;
-            DateTime today = DateTime.Today;
-            lblDate.Text = today.ToString();
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lbltime.Text = DateTime.Now.ToShortTimeString(); 
            
+
+
         }
 
         
@@ -171,7 +173,8 @@ namespace FinalProject
             if (attempts == 4)
             {
 
-                MessageBox.Show("You have reached maximum number of attempts... ");
+                MessageBox.Show("You have reached maximum number of attempts. Please try again later. ");
+                this.Close();
             }
             
         }
@@ -221,6 +224,27 @@ namespace FinalProject
             }
         }
 
-       
+        private void LblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblShowPassword_Click(object sender, EventArgs e)
+        {
+
+
+            //txtPassword.PasswordChar = lblShowPassword.Visible ? '\0' : '*';
+            if(txtPassword.PasswordChar != -1)
+            {
+                this.txtPassword.PasswordChar = '\0';
+            }  
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

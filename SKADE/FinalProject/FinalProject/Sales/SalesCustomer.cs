@@ -101,12 +101,7 @@ namespace FinalProject.Sales
 
         }
 
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CustomerSimpleTableAdapter customerSimple = new CustomerSimpleTableAdapter();
-            customerSimple.FillBy(adminDS1.CustomerSimple, Convert.ToInt32(comboBox1.SelectedValue));
-            textBox1.Clear();
-        }
+
 
         private void Dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -120,6 +115,9 @@ namespace FinalProject.Sales
             DisplayCustomer();
         }
 
-
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

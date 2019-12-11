@@ -41,26 +41,29 @@
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreateCustomer = new System.Windows.Forms.Button();
             this.CustomerDetails = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.list = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerSearch = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.btnClear.Location = new System.Drawing.Point(387, 21);
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(732, 19);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(148, 61);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // custPostal
@@ -80,7 +83,6 @@
             this.custCity.MinimumWidth = 6;
             this.custCity.Name = "custCity";
             this.custCity.ReadOnly = true;
-            this.custCity.Width = 165;
             // 
             // custAddress
             // 
@@ -90,7 +92,6 @@
             this.custAddress.MinimumWidth = 6;
             this.custAddress.Name = "custAddress";
             this.custAddress.ReadOnly = true;
-            this.custAddress.Width = 200;
             // 
             // custPhone
             // 
@@ -100,7 +101,6 @@
             this.custPhone.MinimumWidth = 6;
             this.custPhone.Name = "custPhone";
             this.custPhone.ReadOnly = true;
-            this.custPhone.Width = 148;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -110,7 +110,6 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 180;
             // 
             // Column1
             // 
@@ -120,7 +119,6 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
             // 
             // dgv
             // 
@@ -129,7 +127,7 @@
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.AllowUserToResizeRows = false;
             this.dgv.AutoGenerateColumns = false;
-            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -141,14 +139,14 @@
             this.custEmail});
             this.dgv.DataMember = "CustomerSimple";
             this.dgv.DataSource = this.adminDS1;
-            this.dgv.Location = new System.Drawing.Point(12, 128);
+            this.dgv.Location = new System.Drawing.Point(19, 100);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv.Size = new System.Drawing.Size(1135, 651);
+            this.dgv.Size = new System.Drawing.Size(1169, 651);
             this.dgv.TabIndex = 17;
             // 
             // custEmail
@@ -159,7 +157,6 @@
             this.custEmail.MinimumWidth = 6;
             this.custEmail.Name = "custEmail";
             this.custEmail.ReadOnly = true;
-            this.custEmail.Width = 280;
             // 
             // adminDS1
             // 
@@ -177,70 +174,50 @@
             // 
             // CreateCustomer
             // 
+            this.CreateCustomer.BackColor = System.Drawing.Color.CornflowerBlue;
             this.CreateCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.CreateCustomer.Location = new System.Drawing.Point(970, 22);
+            this.CreateCustomer.ForeColor = System.Drawing.Color.White;
+            this.CreateCustomer.Location = new System.Drawing.Point(1040, 19);
             this.CreateCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CreateCustomer.Name = "CreateCustomer";
             this.CreateCustomer.Size = new System.Drawing.Size(148, 61);
             this.CreateCustomer.TabIndex = 16;
             this.CreateCustomer.Text = "Create Customer";
-            this.CreateCustomer.UseVisualStyleBackColor = true;
+            this.CreateCustomer.UseVisualStyleBackColor = false;
             this.CreateCustomer.Click += new System.EventHandler(this.CreateCustomer_Click);
             // 
             // CustomerDetails
             // 
+            this.CustomerDetails.BackColor = System.Drawing.Color.CornflowerBlue;
             this.CustomerDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.CustomerDetails.Location = new System.Drawing.Point(818, 22);
+            this.CustomerDetails.ForeColor = System.Drawing.Color.White;
+            this.CustomerDetails.Location = new System.Drawing.Point(888, 19);
             this.CustomerDetails.Margin = new System.Windows.Forms.Padding(2);
             this.CustomerDetails.Name = "CustomerDetails";
             this.CustomerDetails.Size = new System.Drawing.Size(148, 61);
             this.CustomerDetails.TabIndex = 15;
             this.CustomerDetails.Text = "Customer Details";
-            this.CustomerDetails.UseVisualStyleBackColor = true;
+            this.CustomerDetails.UseVisualStyleBackColor = false;
             this.CustomerDetails.Click += new System.EventHandler(this.CustomerDetails_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.adminDS1;
-            this.comboBox1.DisplayMember = "customer.Customer Name";
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(544, 45);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(258, 37);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.ValueMember = "customer.id";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
-            // 
-            // list
-            // 
-            this.list.AutoSize = true;
-            this.list.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.list.Location = new System.Drawing.Point(539, 9);
-            this.list.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(222, 29);
-            this.list.TabIndex = 13;
-            this.list.Text = "List of Customers:";
-            this.list.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(236, 21);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(580, 19);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 61);
             this.button1.TabIndex = 12;
             this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(16, 48);
+            this.textBox1.Location = new System.Drawing.Point(305, 50);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(215, 35);
@@ -259,34 +236,58 @@
             // 
             this.CustomerSearch.AutoSize = true;
             this.CustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.CustomerSearch.Location = new System.Drawing.Point(11, 11);
+            this.CustomerSearch.Location = new System.Drawing.Point(300, 19);
             this.CustomerSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CustomerSearch.Name = "CustomerSearch";
             this.CustomerSearch.Size = new System.Drawing.Size(221, 29);
             this.CustomerSearch.TabIndex = 9;
             this.CustomerSearch.Text = "Customer Search:";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnReturn);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.dgv);
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.CustomerSearch);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.CreateCustomer);
+            this.panel1.Controls.Add(this.CustomerDetails);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1203, 701);
+            this.panel1.TabIndex = 18;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnReturn.ForeColor = System.Drawing.Color.White;
+            this.btnReturn.Location = new System.Drawing.Point(19, 20);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(148, 61);
+            this.btnReturn.TabIndex = 12;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // SalesCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 719);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.dgv);
-            this.Controls.Add(this.CreateCustomer);
-            this.Controls.Add(this.CustomerDetails);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.list);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.CustomerSearch);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(1227, 725);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SalesCustomer";
             this.Text = "SalesCustomer";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -305,11 +306,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.Button CreateCustomer;
         private System.Windows.Forms.Button CustomerDetails;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label list;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label CustomerSearch;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

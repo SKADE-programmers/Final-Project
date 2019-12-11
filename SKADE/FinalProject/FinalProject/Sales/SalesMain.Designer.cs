@@ -36,13 +36,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnInventory = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnCreateCustomers = new System.Windows.Forms.Button();
             this.btnCustomerHistory = new System.Windows.Forms.Button();
             this.btnRequests = new System.Windows.Forms.Button();
             this.panelSideBar = new System.Windows.Forms.Panel();
-            this.btnSale = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnSale = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -123,6 +123,18 @@
             this.panelTop.Size = new System.Drawing.Size(1227, 82);
             this.panelTop.TabIndex = 5;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(6, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 36);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Sales";
+            // 
             // btnCreateCustomers
             // 
             this.btnCreateCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,6 +195,18 @@
             this.panelSideBar.Size = new System.Drawing.Size(223, 800);
             this.panelSideBar.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(14, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 168);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
             // btnSale
             // 
             this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -198,35 +222,12 @@
             this.btnSale.UseVisualStyleBackColor = true;
             this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 168);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Emma\'s\r\nSmall\r\nEngine";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(6, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 36);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Sales";
-            // 
             // SalesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1450, 800);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.btnRequests);

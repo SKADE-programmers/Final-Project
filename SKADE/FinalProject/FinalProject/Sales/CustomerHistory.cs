@@ -23,9 +23,12 @@ namespace FinalProject.Sales
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            customerTableAdapter custda = new customerTableAdapter();
+            this.Close();
 
-            custda.Fill(salesDS1.customer);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
 
         }
     }

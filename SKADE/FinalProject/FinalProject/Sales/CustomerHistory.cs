@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataLibrary.SalesDSTableAdapters;
+using DataLibrary;
+
+
 
 namespace FinalProject.Sales
 {
@@ -15,6 +19,14 @@ namespace FinalProject.Sales
         public CustomerHistory()
         {
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            customerTableAdapter custda = new customerTableAdapter();
+
+            custda.Fill(salesDS1.customer);
+
         }
     }
 }

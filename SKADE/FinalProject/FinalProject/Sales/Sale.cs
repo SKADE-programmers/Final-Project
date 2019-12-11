@@ -90,10 +90,7 @@ namespace FinalProject.Sales
             
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-          
-        }
+       
 
         private void radBPurchase_CheckedChanged(object sender, EventArgs e)
         {
@@ -110,7 +107,53 @@ namespace FinalProject.Sales
             this.Close();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        
+
+        private void Btnsrch_Click(object sender, EventArgs e)
+        {
+            customerSimpleTableAdapter cust = new customerSimpleTableAdapter();
+            if (!string.IsNullOrWhiteSpace(txtCustname.Text))
+            {
+                //customerSimpleTableAdapter cust = new customerSimpleTableAdapter();
+                cust.Fill(salesDS1.customerSimple, txtCustname.Text);
+            }
+            else if (txtCustNumber.Text != "")
+            {
+                cust.FillByPhone(salesDS1.customerSimple, txtCustNumber.Text);
+            }
+        }
+
+        private void Btncncl_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            CustomerCreate CC = new CustomerCreate();
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Selectedservices.Add(services[listBox2.SelectedIndex]);
+            services.Remove(services[listBox2.SelectedIndex]);
+            listBox2.Refresh();
+            listBox2.DataSource = services;
+            listBox2.DisplayMember = "Name";
+            listBox2.ValueMember = "ID";
+            listBox3.DataSource = Selectedservices;
+            listBox3.DisplayMember = "Name";
+            listBox3.ValueMember = "ID";
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRemove_Click(object sender, EventArgs e)
         {
 
         }

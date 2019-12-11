@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ClassLibrary;
+using DataLibrary;
+using DataLibrary.AdminDSTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,24 +10,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
-using DataLibrary;
-using DataLibrary.AdminDSTableAdapters;
 
-
-namespace FinalProject
+namespace FinalProject.Sales
 {
-   
-    public partial class CustomerCreate : Form
+    public partial class SalesCreateCustomer : Form
     {
-        
-        public CustomerCreate()
+        public SalesCreateCustomer()
         {
             InitializeComponent();
         }
-
-
-
         private void Create_Click(object sender, EventArgs e)
         {
             Custom custom = new Custom();
@@ -41,13 +35,13 @@ namespace FinalProject
             {
                 if (custom.cusFirstName == "" || custom.cusLastName == "" || custom.phone == "" || custom.cusAddress == "" || custom.cusCity == "" || custom.cusPostal == "" || custom.cusEmail == "")
                 {
-                    MessageBox.Show("You cannot leave these.", "Alert!", MessageBoxButtons.OK );
+                    MessageBox.Show("You cannot leave these.", "Alert!", MessageBoxButtons.OK);
                 }
                 else
                 {
                     Commands.CreateCustomer(custom.cusFirstName, custom.cusLastName, custom.phone, custom.cusAddress, custom.cusCity, custom.cusPostal, custom.cusEmail);
                     //DataTable table = new DataTable();
-                   // customer.CreateCustomer(custom.cusFirstName, custom.cusLastName, custom.phone, custom.cusAddress, custom.cusCity, custom.cusPostal, custom.cusEmail);
+                    // customer.CreateCustomer(custom.cusFirstName, custom.cusLastName, custom.phone, custom.cusAddress, custom.cusCity, custom.cusPostal, custom.cusEmail);
                     MessageBox.Show("Create Successfully", "Create", MessageBoxButtons.OK);
                     this.Close();
                 }
@@ -57,7 +51,7 @@ namespace FinalProject
                 string status = "Not Created" + ex.Message;
             }
 
-            
+
         }
 
 
@@ -66,21 +60,6 @@ namespace FinalProject
         {
             this.Close();
         }
-
-        private void TextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void TextBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
-    }
-
+    
+}
+}

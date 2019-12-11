@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataLibrary;
+using DataLibrary.AdminDSTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,46 +9,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
-using DataLibrary;
-using DataLibrary.AdminDSTableAdapters;
 
-namespace FinalProject
+namespace FinalProject.Sales
 {
-    public partial class CustomerDetails : Form
+    public partial class SalesDetail : Form
     {
-        
-        public CustomerDetails(int id)
+        public SalesDetail(int id)
         {
-            InitializeComponent();            
-            CustomerDetailsTableAdapter customer = new CustomerDetailsTableAdapter();   
+            InitializeComponent();
+            CustomerDetailsTableAdapter customer = new CustomerDetailsTableAdapter();
             customer.Fill(adminDS2.CustomerDetails, id);
 
-                lblID.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[0].ToString();
-                lblFirst.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[1].ToString();
-                lblLast.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[2].ToString();
-                lblphonedet .Text = adminDS2.CustomerDetails.Rows[0].ItemArray[3].ToString();
-                lblAddressdes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[4].ToString();
-                label4city.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[5].ToString();
-                lblPostaldes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[6].ToString();
-                lblEmaildes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[7].ToString();                       
+            lblID.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[0].ToString();
+            lblFirst.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[1].ToString();
+            lblLast.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[2].ToString();
+            lblphonedet.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[3].ToString();
+            lblAddressdes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[4].ToString();
+            label4city.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[5].ToString();
+            lblPostaldes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[6].ToString();
+            lblEmaildes.Text = adminDS2.CustomerDetails.Rows[0].ItemArray[7].ToString();
         }
 
         private void CustomerDetails_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-           txtFirst.Text = lblFirst.Text;
-           txtLast.Text = lblLast.Text;
-           txtID.Text = lblID.Text;
-           txtPhone.Text = lblphonedet.Text;
-           txtPostal.Text = lblPostaldes.Text;
-           txtCity.Text = label4city.Text;
-           txtEmail.Text = lblEmaildes.Text;
-           txtAddress.Text = lblAddressdes.Text;
+            txtFirst.Text = lblFirst.Text;
+            txtLast.Text = lblLast.Text;
+            txtID.Text = lblID.Text;
+            txtPhone.Text = lblphonedet.Text;
+            txtPostal.Text = lblPostaldes.Text;
+            txtCity.Text = label4city.Text;
+            txtEmail.Text = lblEmaildes.Text;
+            txtAddress.Text = lblAddressdes.Text;
             VisibleControls();
         }
 
@@ -55,8 +53,7 @@ namespace FinalProject
             if (txtFirst.Visible != true)
             {
                 //hides labels, shows textboxes
-                btnCreate.Visible = false;
-                btnDelete.Visible = true;
+                btnCreate.Visible = false;               
                 btnEdit.Text = "Cancel";
                 btnSave.Visible = true;
                 lblFirst.Visible = true;
@@ -84,7 +81,6 @@ namespace FinalProject
             {
                 //shows labels, hides textboxes
                 btnCreate.Visible = true;
-                btnDelete.Visible = false;
                 btnEdit.Text = "Edit";
                 btnSave.Visible = false;
                 lblFirst.Visible = true;
@@ -111,21 +107,7 @@ namespace FinalProject
             }
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Delete?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Commands.DeleteCustomer(Convert.ToInt32(lblID.Text));
-                //CustomerCreate_DeleteTableAdapter del = new CustomerCreate_DeleteTableAdapter();
-                // del.DeleteCustomer(Convert.ToInt32(lblID.Text));
-                VisibleControls();
-                this.Close();
-                //CustomerSimpleTableAdapter cus = new CustomerSimpleTableAdapter();
-                //cus.Fill(adminDS2.CustomerSimple);
 
-            }
-        }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
@@ -138,7 +120,7 @@ namespace FinalProject
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            CustomerCreate customerCreate = new CustomerCreate();
+            SalesCreateCustomer customerCreate = new SalesCreateCustomer();
             Form parent = this.ParentForm;
             customerCreate.TopLevel = false;
             parent.Controls["panel2"].Controls.Add(customerCreate);
@@ -170,11 +152,6 @@ namespace FinalProject
         }
 
         private void lblID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

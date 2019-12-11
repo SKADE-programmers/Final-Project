@@ -34,7 +34,6 @@
             this.dgvSearchResults = new System.Windows.Forms.DataGridView();
             this.adminDS1 = new DataLibrary.AdminDS();
             this.serviceorderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.lblTitleWarrantyReportSearch = new System.Windows.Forms.Label();
             this.lblSpecificDay = new System.Windows.Forms.Label();
             this.lblSpecificMonth = new System.Windows.Forms.Label();
             this.lblSpecificYear = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.btnClearTable = new System.Windows.Forms.Button();
             this.dtpWarrantyStartDate = new System.Windows.Forms.DateTimePicker();
             this.emmasDataSet = new DataLibrary.EmmasDataSet();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -57,11 +55,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnWarrantySearch = new System.Windows.Forms.Button();
+            this.lblTitleWarrantyReportSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceorderBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emmasDataSet)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,11 +91,11 @@
             this.dgvSearchResults.AutoGenerateColumns = false;
             this.dgvSearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSearchResults.DataSource = this.adminDS1;
-            this.dgvSearchResults.Location = new System.Drawing.Point(274, 3);
+            this.dgvSearchResults.Location = new System.Drawing.Point(274, 18);
             this.dgvSearchResults.Name = "dgvSearchResults";
             this.dgvSearchResults.ReadOnly = true;
             this.dgvSearchResults.RowHeadersWidth = 51;
-            this.dgvSearchResults.Size = new System.Drawing.Size(860, 689);
+            this.dgvSearchResults.Size = new System.Drawing.Size(800, 633);
             this.dgvSearchResults.TabIndex = 4;
             // 
             // adminDS1
@@ -108,17 +106,6 @@
             // serviceorderBindingSource1
             // 
             this.serviceorderBindingSource1.DataMember = "service_order";
-            // 
-            // lblTitleWarrantyReportSearch
-            // 
-            this.lblTitleWarrantyReportSearch.BackColor = System.Drawing.Color.White;
-            this.lblTitleWarrantyReportSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleWarrantyReportSearch.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblTitleWarrantyReportSearch.Location = new System.Drawing.Point(0, 0);
-            this.lblTitleWarrantyReportSearch.Name = "lblTitleWarrantyReportSearch";
-            this.lblTitleWarrantyReportSearch.Size = new System.Drawing.Size(112, 54);
-            this.lblTitleWarrantyReportSearch.TabIndex = 5;
-            this.lblTitleWarrantyReportSearch.Text = "Warranty \r\nReport";
             // 
             // lblSpecificDay
             // 
@@ -236,7 +223,7 @@
             this.btnClearTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearTable.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearTable.ForeColor = System.Drawing.Color.White;
-            this.btnClearTable.Location = new System.Drawing.Point(29, 588);
+            this.btnClearTable.Location = new System.Drawing.Point(58, 577);
             this.btnClearTable.Name = "btnClearTable";
             this.btnClearTable.Size = new System.Drawing.Size(152, 35);
             this.btnClearTable.TabIndex = 99;
@@ -258,18 +245,10 @@
             this.emmasDataSet.DataSetName = "EmmasDataSet";
             this.emmasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblTitleWarrantyReportSearch);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(125, 73);
-            this.panel2.TabIndex = 33;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.lblTitleWarrantyReportSearch);
             this.panel3.Controls.Add(this.dgvSearchResults);
             this.panel3.Controls.Add(this.btnReturn);
             this.panel3.Controls.Add(this.btnClearTable);
@@ -292,9 +271,9 @@
             this.panel3.Controls.Add(this.lblWarrantyStartDate);
             this.panel3.Controls.Add(this.lblWarrantyEndDate);
             this.panel3.Controls.Add(this.lblSpecificDay);
-            this.panel3.Location = new System.Drawing.Point(12, 12);
+            this.panel3.Location = new System.Drawing.Point(43, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1137, 695);
+            this.panel3.Size = new System.Drawing.Size(1089, 663);
             this.panel3.TabIndex = 34;
             // 
             // btnReturn
@@ -304,7 +283,7 @@
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.Location = new System.Drawing.Point(30, 629);
+            this.btnReturn.Location = new System.Drawing.Point(59, 618);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(152, 35);
             this.btnReturn.TabIndex = 99;
@@ -359,7 +338,7 @@
             this.btnWarrantySearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWarrantySearch.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWarrantySearch.ForeColor = System.Drawing.Color.White;
-            this.btnWarrantySearch.Location = new System.Drawing.Point(29, 547);
+            this.btnWarrantySearch.Location = new System.Drawing.Point(58, 536);
             this.btnWarrantySearch.Name = "btnWarrantySearch";
             this.btnWarrantySearch.Size = new System.Drawing.Size(153, 35);
             this.btnWarrantySearch.TabIndex = 98;
@@ -367,13 +346,23 @@
             this.btnWarrantySearch.UseVisualStyleBackColor = false;
             this.btnWarrantySearch.Click += new System.EventHandler(this.BtnWarrantySearch_Click);
             // 
+            // lblTitleWarrantyReportSearch
+            // 
+            this.lblTitleWarrantyReportSearch.BackColor = System.Drawing.Color.White;
+            this.lblTitleWarrantyReportSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleWarrantyReportSearch.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblTitleWarrantyReportSearch.Location = new System.Drawing.Point(63, 18);
+            this.lblTitleWarrantyReportSearch.Name = "lblTitleWarrantyReportSearch";
+            this.lblTitleWarrantyReportSearch.Size = new System.Drawing.Size(112, 35);
+            this.lblTitleWarrantyReportSearch.TabIndex = 5;
+            this.lblTitleWarrantyReportSearch.Text = "Warranty \r\nReport";
+            // 
             // WarrantyReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 719);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WarrantyReports";
@@ -383,7 +372,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.adminDS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceorderBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emmasDataSet)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -395,7 +383,6 @@
         private System.Windows.Forms.Label lblWarrantyStartDate;
         private System.Windows.Forms.Label lblWarrantyEndDate;
         private System.Windows.Forms.DataGridView dgvSearchResults;
-        private System.Windows.Forms.Label lblTitleWarrantyReportSearch;
         private System.Windows.Forms.Label lblSpecificDay;
         private System.Windows.Forms.Label lblSpecificMonth;
         private System.Windows.Forms.Label lblSpecificYear;
@@ -418,7 +405,6 @@
      //   private EmmasDataSet emmasDataSet;
         private DataLibrary.AdminDS adminDS1;
         private DataLibrary.EmmasDataSet emmasDataSet;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClearTable;
         private System.Windows.Forms.Button btnWarrantySearch;
@@ -428,5 +414,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Label lblTitleWarrantyReportSearch;
     }
 }

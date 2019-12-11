@@ -48,11 +48,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.adminPosDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +60,7 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label10.Location = new System.Drawing.Point(3, 1);
+            this.label10.Location = new System.Drawing.Point(23, 25);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 50);
             this.label10.TabIndex = 35;
@@ -269,18 +267,10 @@
             this.panel7.TabIndex = 58;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(138, 72);
-            this.panel2.TabIndex = 59;
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.label10);
             this.panel8.Controls.Add(this.panel6);
             this.panel8.Controls.Add(this.panel4);
             this.panel8.Controls.Add(this.panel7);
@@ -305,7 +295,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1161, 719);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -320,8 +309,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EmployeeCreate_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.adminPosDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
@@ -350,7 +337,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
     }
 }

@@ -81,6 +81,7 @@ namespace FinalProject
             
             if(txtFirst.Visible != true)
             {
+                btnNew.Visible = false;
                 btnDelete.Visible = true;
                 btnEdit.Text = "Cancel";
                 btnEditLogin.Visible = true;
@@ -100,6 +101,7 @@ namespace FinalProject
             }
             else
             {
+                btnNew.Visible = true;
                 btnDelete.Visible = false;
                 btnEdit.Text = "Edit";
                 btnEditLogin.Visible = false;

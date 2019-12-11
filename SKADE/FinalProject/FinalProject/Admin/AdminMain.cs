@@ -57,6 +57,7 @@ namespace FinalProject
             //this.Hide();
             panel2.Controls.Add(employeDetailForm);
             employeDetailForm.Show();
+            employeDetailForm.BringToFront();
         }
 
         private void btnManageCustomers_Click(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace FinalProject
             //this.Hide();
             panel2.Controls.Add(customer);
             customer.Show();
+            customer.BringToFront();
         }
 
         private void btnSalesReports_Click(object sender, EventArgs e)
@@ -79,6 +81,7 @@ namespace FinalProject
             //this.Hide();
             panel2.Controls.Add(weeklyReport);
             weeklyReport.Show();
+            weeklyReport.BringToFront();
         }
 
         private void btnWarrantyReport_Click(object sender, EventArgs e)
@@ -90,15 +93,20 @@ namespace FinalProject
             //this.Hide();
             panel2.Controls.Add(warranty);
             warranty.Show();
+            warranty.BringToFront();
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
-        {
-            Form main = this.MdiParent;
-            SearchInventory inventory = new SearchInventory();
-            inventory.MdiParent = main;
-            panel2.Controls.Add(inventory);
-            inventory.Show();
+        {       
+            
+            
+                Form main = this.MdiParent;
+                SearchInventory inventory = new SearchInventory();
+                inventory.MdiParent = main;
+                panel2.Controls.Add(inventory);
+                inventory.Show();
+                inventory.BringToFront();
+
         }
 
         private void btnRequests_Click(object sender, EventArgs e)
@@ -116,5 +124,7 @@ namespace FinalProject
         {
 
         }
+
+
     }
 }

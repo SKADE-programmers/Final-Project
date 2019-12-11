@@ -40,11 +40,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnRequests = new System.Windows.Forms.Button();
             this.panelSideBar = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnOrderHistory = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -192,6 +192,18 @@
             this.panelSideBar.Size = new System.Drawing.Size(223, 800);
             this.panelSideBar.TabIndex = 8;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(14, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 168);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Emma\'s\r\nSmall\r\nEngine";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -239,18 +251,6 @@
             this.panelTop.Size = new System.Drawing.Size(1226, 82);
             this.panelTop.TabIndex = 6;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 168);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Emma\'s\r\nSmall\r\nEngine";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -268,6 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1450, 800);
+            this.ControlBox = false;
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnRequests);

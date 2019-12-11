@@ -59,7 +59,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEditLogin = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.adminDS)).BeginInit();
@@ -353,7 +353,7 @@
             this.panel7.Controls.Add(this.btnDelete);
             this.panel7.Controls.Add(this.btnEditLogin);
             this.panel7.Controls.Add(this.btnEdit);
-            this.panel7.Controls.Add(this.button1);
+            this.panel7.Controls.Add(this.btnNew);
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.listBox1);
@@ -386,6 +386,7 @@
             this.btnSave.TabIndex = 59;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.button1_Click_Save);
             // 
             // btnDelete
@@ -401,6 +402,7 @@
             this.btnDelete.TabIndex = 58;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEditLogin
@@ -416,6 +418,7 @@
             this.btnEditLogin.TabIndex = 57;
             this.btnEditLogin.Text = "Edit Login";
             this.btnEditLogin.UseVisualStyleBackColor = false;
+            this.btnEditLogin.Visible = false;
             this.btnEditLogin.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnEdit
@@ -433,20 +436,20 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button1
+            // btnNew
             // 
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(267, 580);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 46);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Create New Employee";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.BtnCreate_Click);
+            this.btnNew.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(267, 580);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(111, 46);
+            this.btnNew.TabIndex = 55;
+            this.btnNew.Text = "Create New Employee";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
             // button2
             // 
@@ -543,7 +546,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEditLogin;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button button2;
     }
 }

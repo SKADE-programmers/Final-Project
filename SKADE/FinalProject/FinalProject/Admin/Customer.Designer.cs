@@ -107,7 +107,7 @@
             this.dgv.AllowUserToResizeRows = false;
             this.dgv.AutoGenerateColumns = false;
             this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgv.BackgroundColor = System.Drawing.Color.LightBlue;
+            this.dgv.BackgroundColor = System.Drawing.Color.Silver;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -121,14 +121,14 @@
             this.custEmail});
             this.dgv.DataMember = "CustomerSimple";
             this.dgv.DataSource = this.adminDS1;
-            this.dgv.Location = new System.Drawing.Point(0, 357);
+            this.dgv.Location = new System.Drawing.Point(9, 357);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv.Size = new System.Drawing.Size(1114, 311);
+            this.dgv.Size = new System.Drawing.Size(1092, 311);
             this.dgv.TabIndex = 8;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_CellContentClick);
             // 

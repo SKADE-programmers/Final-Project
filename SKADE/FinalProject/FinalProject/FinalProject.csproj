@@ -111,16 +111,40 @@
     <Compile Include="Admin\WarrantyReports.designer.cs">
       <DependentUpon>WarrantyReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\WeeklyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\WeeklyReport.designer.cs">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryCount.designer.cs">
+      <DependentUpon>InventoryCount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\InventoryMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory\InventoryMain.designer.cs">
       <DependentUpon>InventoryMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\InventoryOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryOrder.designer.cs">
+      <DependentUpon>InventoryOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryRequests.designer.cs">
+      <DependentUpon>InventoryRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\OrderHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\OrderHistory.Designer.cs">
+    <Compile Include="Inventory\OrderHistory.designer.cs">
       <DependentUpon>OrderHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Repair\RepairMain.cs">
@@ -132,7 +156,7 @@
     <Compile Include="Sales\CustomerHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\CustomerHistory.Designer.cs">
+    <Compile Include="Sales\CustomerHistory.designer.cs">
       <DependentUpon>CustomerHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\Sale.cs">
@@ -159,29 +183,11 @@
     <Compile Include="Sales\SalesDetail.Designer.cs">
       <DependentUpon>SalesDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\InventoryCount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory\InventoryCount.Designer.cs">
-      <DependentUpon>InventoryCount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inventory\InventoryOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory\InventoryOrder.Designer.cs">
-      <DependentUpon>InventoryOrder.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inventory\InventoryRequestDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory\InventoryRequestDetails.Designer.cs">
       <DependentUpon>InventoryRequestDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inventory\InventoryRequests.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory\InventoryRequests.Designer.cs">
-      <DependentUpon>InventoryRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\SalesMain.cs">
       <SubType>Form</SubType>
@@ -232,18 +238,6 @@
     </Compile>
     <Compile Include="Repair\RepairRequests.Designer.cs">
       <DependentUpon>RepairRequests.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales\SearchSalesRecord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\SearchSalesRecord.Designer.cs">
-      <DependentUpon>SearchSalesRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\WeeklyReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\WeeklyReport.Designer.cs">
-      <DependentUpon>WeeklyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Shared\SearchInventory.cs">
       <SubType>Form</SubType>
@@ -325,9 +319,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesMain.resx">
       <DependentUpon>SalesMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sales\SearchSalesRecord.resx">
-      <DependentUpon>SearchSalesRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shared\forgotPassword2.resx">
       <DependentUpon>forgotPassword2.cs</DependentUpon>

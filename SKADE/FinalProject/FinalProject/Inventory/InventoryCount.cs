@@ -58,5 +58,10 @@ namespace FinalProject
             search.Fill(inventoryDS.InventorySearch);
             lBoxType_SelectedIndexChanged( sender,  e);
         }
+
+        private void LblBrandText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

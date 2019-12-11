@@ -280,6 +280,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1450, 800);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnRequests);
             this.Controls.Add(this.panelTop);

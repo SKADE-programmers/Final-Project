@@ -173,5 +173,10 @@ namespace FinalProject
         {
 
         }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

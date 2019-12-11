@@ -52,5 +52,18 @@ namespace FinalProject
             panel2.Controls.Add(repairRecord);
             repairRecord.Show();
         }
+
+        private void LblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RepairMain_Load(object sender, EventArgs e)
+        {
+            button1.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.BorderSize = 0;
+        }
     }
 }

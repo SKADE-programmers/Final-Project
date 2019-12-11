@@ -186,5 +186,9 @@ namespace FinalProject
             this.Close();
         }
 
+        private void CBoxPos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

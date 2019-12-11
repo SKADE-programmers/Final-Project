@@ -53,5 +53,14 @@ namespace FinalProject
             panel2.Controls.Add(inventory);
             inventory.Show();
         }
+
+        private void SalesMain_Load(object sender, EventArgs e)
+        {
+            btnCreateCustomers.FlatAppearance.BorderSize = 0;
+            btnCustomerHistory.FlatAppearance.BorderSize = 0;
+            btnInventory.FlatAppearance.BorderSize = 0;
+            btnRequests.FlatAppearance.BorderSize = 0;
+
+        }
     }
 }

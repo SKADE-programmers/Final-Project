@@ -101,19 +101,15 @@ namespace FinalProject
            
         }
 
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CustomerSimpleTableAdapter customerSimple = new CustomerSimpleTableAdapter();
-            customerSimple.FillBy(adminDS1.CustomerSimple, Convert.ToInt32(comboBox1.SelectedValue));
-            textBox1.Clear();
-        }
 
         private void Dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+       
+
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             btnClear.Visible = false;
             textBox1.Text = "";

@@ -61,5 +61,16 @@ namespace FinalProject
             panel2.Controls.Add(inventoryOrder);
             inventoryOrder.Show();
         }
+
+        private void InventoryMain_Load(object sender, EventArgs e)
+        {
+            btnRequests.FlatAppearance.BorderSize = 0;
+            btnPlaceOrder.FlatAppearance.BorderSize = 0;
+            btnInventory.FlatAppearance.BorderSize = 0;
+            btnOrderHistory.FlatAppearance.BorderSize = 0;
+            btnCount.FlatAppearance.BorderSize = 0;
+
+                
+        }
     }
 }

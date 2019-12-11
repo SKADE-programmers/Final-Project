@@ -26,8 +26,11 @@ namespace FinalProject
             string datestring = today.ToShortDateString();
             lblDate.Text = datestring;
             btnCreateNewEmployee.FlatAppearance.BorderSize = 0;
-            btnDepartment.FlatAppearance.BorderSize = 0;
             btnSalesReports.FlatAppearance.BorderSize = 0;
+            btnInventory.FlatAppearance.BorderSize = 0;
+            btnManageCustomers.FlatAppearance.BorderSize = 0;
+            btnWarrantyReport.FlatAppearance.BorderSize = 0;
+
         }
 
         private void AdminMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -91,7 +94,11 @@ namespace FinalProject
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("WiP", "Not implemented yet");
+            Form main = this.MdiParent;
+            SearchInventory inventory = new SearchInventory();
+            inventory.MdiParent = main;
+            panel2.Controls.Add(inventory);
+            inventory.Show();
         }
 
         private void btnRequests_Click(object sender, EventArgs e)
@@ -103,6 +110,11 @@ namespace FinalProject
         private void ChildFormClosing(object sender, FormClosingEventArgs e)
         {
             this.Show();
+        }
+
+        private void PanelSideBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

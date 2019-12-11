@@ -66,6 +66,21 @@ namespace FinalProject
         {
             this.Close();
         }
+
+        private void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

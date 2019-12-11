@@ -243,5 +243,13 @@ namespace DataLibrary
 
         }
 
+        public static void placeOrder(string orderNum, DateTime date, bool paid) { }
+
+        public static void UpdateRequest( ) 
+        {
+
+        }
+
+
     }
 }

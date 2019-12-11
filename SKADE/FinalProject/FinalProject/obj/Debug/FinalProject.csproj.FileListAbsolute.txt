@@ -256,3 +256,6 @@ C:\Users\Administrator\Desktop\Final-Project-master\SKADE\FinalProject\FinalProj
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.SearchInventory.resources
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Inventory.OrderHistory.resources
 C:\Users\Administrator\Desktop\Final-Project-master\SKADE\FinalProject\FinalProject\bin\Debug\DataLibrary.dll
+C:\Users\Administrator\Desktop\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Sales.SalesCreateCustomer.resources
+C:\Users\Administrator\Desktop\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Sales.SalesCustomer.resources
+C:\Users\Administrator\Desktop\Final-Project-master\SKADE\FinalProject\FinalProject\obj\Debug\FinalProject.Sales.SalesDetail.resources
